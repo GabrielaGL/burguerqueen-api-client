@@ -501,7 +501,7 @@ estas tres opciones la manera en que trabajarás con el backend.
 
 1. Consumiendo una API que desarrollarán tus compañeras.
 2. Consumiendo esta
-[API](https://app.swaggerhub.com/apis-docs/ssinuco/BurgerQueenAPI/2.0.0)
+[API](https://github.com/Laboratoria/burger-queen-api-mock)
 que desarrollamos para ti.
 3. Mockeando la API, puedes utilizar herramientas como
 [nock](https://github.com/nock/nock),
