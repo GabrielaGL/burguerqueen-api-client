@@ -517,7 +517,7 @@ La lógica del proyecto debe estar implementada completamente en JavaScript
 (ES6+), HTML y CSS y empaquetada de manera automatizada.
 
 En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://reactjs.org/) o
+(debes elegir entre [React](https://react.dev/) o
 [Angular](https://angular.io/)).
 
 La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
