@@ -14,7 +14,7 @@
 
 ## 1. Preámbulo
 
-[React](https://reactjs.org/) y [Angular](https://angular.io/)
+[React](https://react.dev/) y [Angular](https://angular.io/)
 son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
 lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
 En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
@@ -338,49 +338,49 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
   <details><summary>Links</summary><p>
 
-  * [Presentando JSX - Documentación oficial](https://es.reactjs.org/docs/introducing-jsx.html)
+  * [Presentando JSX - Documentación oficial](https://react.dev/learn/writing-markup-with-jsx)
 </p></details>
 
 - [ ] **Componentes y propiedades (props)**
 
   <details><summary>Links</summary><p>
 
-  * [Componentes y propiedades - Documentación oficial](https://es.reactjs.org/docs/components-and-props.html)
+  * [Componentes y propiedades - Documentación oficial](https://react.dev/learn/passing-props-to-a-component)
 </p></details>
 
 - [ ] **Manejo de eventos**
 
   <details><summary>Links</summary><p>
 
-  * [Manejando eventos - Documentación oficial](https://es.reactjs.org/docs/handling-events.html)
+  * [Manejando eventos - Documentación oficial](https://react.dev/learn/responding-to-events)
 </p></details>
 
 - [ ] **Listas y keys**
 
   <details><summary>Links</summary><p>
 
-  * [Listas y keys - Documentación oficial](https://es.reactjs.org/docs/lists-and-keys.html)
+  * [Listas y keys - Documentación oficial](https://react.dev/learn/rendering-lists)
 </p></details>
 
 - [ ] **Renderizado condicional**
 
   <details><summary>Links</summary><p>
 
-  * [Renderizado condicional - Documentación oficial](https://es.reactjs.org/docs/conditional-rendering.html)
+  * [Renderizado condicional - Documentación oficial](https://react.dev/learn/conditional-rendering)
 </p></details>
 
 - [ ] **Elevación de estado**
 
   <details><summary>Links</summary><p>
 
-  * [Levantando el estado - Documentación oficial](https://es.reactjs.org/docs/lifting-state-up.html)
+  * [Levantando el estado - Documentación oficial](https://react.dev/learn/sharing-state-between-components)
 </p></details>
 
 - [ ] **Hooks**
 
   <details><summary>Links</summary><p>
 
-  * [Presentando Hooks - Documentación oficial](https://es.reactjs.org/docs/hooks-intro.html)
+  * [Presentando Hooks - Documentación oficial](https://react.dev/reference/react)
 </p></details>
 
 - [ ] **CSS modules**
@@ -710,7 +710,7 @@ aplicaciones web que se ejecutan en el servidor (Node.js).
 
 ### Frameworks / libraries
 
-* [React](https://reactjs.org/)
+* [React](https://react.dev/)
 * [Angular](https://angular.io/)
 
 ### Herramientas
