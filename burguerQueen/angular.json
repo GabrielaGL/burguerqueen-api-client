@@ -32,6 +32,12 @@
             "styles": [
               "src/styles.sass"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/utils",
+                "src/styles/business-utils"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -95,6 +101,12 @@
             "styles": [
               "src/styles.sass"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles/utils",
+                "src/styles/business-utils"
+              ]
+            },
             "scripts": []
           }
         }
