@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css2?family=Modak&family=Montserrat&display=swap'
+
+$font-tittle: 'Modak'
+$font-content: 'Montserrat'
+$dark-color: #3F120F
+$lg-color: #FFFFE5
+$btn-orange: #E59328
+$dark-orange: #E59328
+
+@mixin tittles
+    font-family: $font-tittle
+    color: $dark-color
+
+@mixin btnclassic
+    padding: 10px 30px 10px 30px
+    text-decoration: none
+    font-family: $font-content
+    font-size: 30px
+
+    
+body
+    background-color: $lg-color
