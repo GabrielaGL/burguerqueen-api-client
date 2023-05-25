@@ -1,7 +1,17 @@
-@import 'https://fonts.googleapis.com/css2?family=Modak&family=Montserrat&display=swap'
+@import /src/styles.sass
 
-$font-tittle: 'Modak'
-$font-content: 'Montserrat'
+.sect-tittle
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 200
 
 h1
-    font-family: $font-tittle
+    @include tittles
+    font-size: 90px
+
+.btn-classic
+    @include btnclassic
+
+
