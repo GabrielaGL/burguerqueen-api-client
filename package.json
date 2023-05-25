@@ -1,7 +1,7 @@
 {
   "name": "burger-queen-api-client",
   "version": "1.0.0",
-  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones](#4-consideraciones)\r * [5. Criterios de aceptación del proyecto](#5-criterios-de-aceptación-del-proyecto)\r * [6. Despliegue](#6-despliegue)\r * [7. Pistas / tips](#7-pistas--tips)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npm start"
