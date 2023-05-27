@@ -1,17 +1,31 @@
 @import /src/styles.sass
 
+.back
+    background-image: url(../assets/images/fondo-login.png)
+    width: 100%
+    height: 100vh
+
+.content
+    width: 100%
+    height: 100vh
+
 .sect-tittle
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
-    width: 200
-
+    
 h1
     @include tittles
-    font-size: 90px
+    font-size: 85px
+    margin-bottom: 35px
+    margin-top: 25px
 
-.btn-classic
-    @include btnclassic
-
-
+.login-back
+    display: flex
+    justify-content: center
+    align-items: center
+    background-image: url(../assets/images/cuadro-login.png)
+    background-repeat: no-repeat
+    width: 100%
+    height: 100%
