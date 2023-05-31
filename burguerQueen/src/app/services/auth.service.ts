@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url: string = 'https://virtserver.swaggerhub.com/ssinuco/BurgerQueenAPI/2.0.0/'
+  url: string = 'http://localhost:8080/'
 
   constructor(private http: HttpClient) { }
 

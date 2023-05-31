@@ -13,16 +13,19 @@
           </label>
   
           <div class="inputContainer">
-            <input type="email" class="input" placeholder="" formControlName="email">
+            <input type="email" class="input" placeholder="" formControlName="email" required>
             <label for="" class="label">Email</label>
           </div>
   
           <div class="inputContainer">
-            <input type="password" class="input" placeholder="" formControlName="password">
+            <input type="password" class="input" placeholder="" formControlName="password" required>
             <label for="" class="label">Contraseña</label>
           </div>
   
           <button type="submit" class="btn-classic" value="Log In"> Ingresar </button>
+          <div class="alert alert-danger" *ngIf="errorstatus">
+            <p>{{errorMsg}}</p>
+          </div>
         </form>
       </div>
   

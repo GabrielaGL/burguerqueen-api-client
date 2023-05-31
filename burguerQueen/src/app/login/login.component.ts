@@ -20,18 +20,30 @@ export class LoginComponent {
 
   constructor(private authLog:AuthService, private router:Router) {}
 
-  ngOnInit(): void {
+  errorstatus:boolean = false;
+  errorMsg:any = '';
 
+  ngOnInit(): void {
+    this.checkLocalStorage
+  }
+
+  checkLocalStorage() {
+    if(localStorage.getItem('accessToken')) {
+      this.router.navigate(['menu/breakfast']);
+    }
   }
 
   onLogin(form: LoginI) {
     this.authLog.loginByEmail(form).subscribe(data => {
       let dataResp:ResponseI = data;
-      console.log(data);
+      console.log('Este es data', data);
       
       if(dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
         this.router.navigate(['menu/breakfast']);
+      } else {
+        this.errorstatus = true;
+        this.errorMsg = dataResp.status.errorMsg;
       }
       
     })
