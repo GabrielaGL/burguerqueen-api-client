@@ -1,0 +1,76 @@
+@import /src/styles.sass
+
+.sect-tittle
+	@include flex-center
+	align-items: center
+
+.sect-btns
+	@extend .sect-tittle
+	margin-left: -82px
+
+h1
+	@include tittles
+	font-size: 85px
+	margin-bottom: 35px
+	margin-top: 25px
+
+.btn-classic
+	@include btnclassic
+	color: $dark-color
+	border: 2px solid $btn-orange
+	background-color: $lg-color
+	margin-right: 104px
+
+.btn-classic-b
+	@extend .btn-classic
+	background-color: $btn-orange
+
+.btns-aside
+	width: 180px
+
+aside
+	@include flex-center
+
+.btn-user
+	@include btnshop
+
+.btn-note
+	@include btnnote
+
+.btn-back
+	@include btnback
+
+.add-user
+	border-radius: 7px
+	border: 2px solid $dark-color
+	width: 572px
+	height: 519px
+	margin-left: 200px
+	margin-top: -430px
+
+.user-info
+	border-radius: 7px
+	border: 2px solid $dark-color
+	width: 150px
+	height: 150px
+
+.order
+	@include flex-center
+	border-radius: 7px
+	border: 2px solid $dark-color
+	margin-top: -610px
+	margin-left: 800px
+	width: 326px
+	height: 470px
+
+h2
+	@include tittles
+	font-size: 51px
+	margin-top: 2px
+	margin-bottom: 3px
+
+#send-kitchen
+	@extend .btn-classic-b
+	margin-left: 835px
+	margin-top: 35px
+	font-size: 22px

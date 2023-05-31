@@ -1,1 +1,54 @@
-<p>add-waitress works!</p>
+<div>
+    <div class="sect-tittle">
+        <h1>Trabajadorxs</h1>
+    </div>
+    <div class="sect-btns">
+        <button type="button" class="btn-classic">Meserxs</button>
+        <a [routerLink]="['/menu/lunch']">
+            <button type="button" class="btn-classic-b">Chef</button>
+        </a>
+    </div>
+
+    <div class="btns-aside">
+        <aside>
+            <button type="button" class="btn-user"
+                style="background-image:url(/assets/images/btn-lg-user.png);"></button>
+        </aside>
+
+        <aside>
+            <button type="button" class="btn-note"
+                style="background-image:url(/assets/images/btn-dark-note.png);"></button>
+        </aside>
+
+        <aside>
+            <a [routerLink]="['']">
+                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            </a>
+        </aside>
+
+    </div>
+
+    <div class="add-user">
+        <article class="user-info">
+            <p id="user">Usuario</p>
+            <p id="name-user">Nombre</p>
+            <p id="role">Rol</p>
+            <p id="email">Email</p>
+        </article>
+    </div>
+
+    <div>
+        <article class="order">
+            <div>
+                <h2>Orden</h2>
+            </div>
+            <div class="info-users">
+                <div id="user">Mariana</div>
+                <div id="customer">andrea</div>
+            </div>
+        </article>
+
+        <button type="button" id="send-kitchen">Enviar a Cocina</button>
+    </div>
+
+</div>
