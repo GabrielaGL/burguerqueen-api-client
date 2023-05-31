@@ -7,22 +7,22 @@
       </section>
   
       <div class="login-back">
-        <form action="">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
           <label>
             <h2>Login</h2>
           </label>
   
           <div class="inputContainer">
-            <input type="email" id="email" class="input" placeholder="" required>
+            <input type="email" class="input" placeholder="" formControlName="email">
             <label for="" class="label">Email</label>
           </div>
   
           <div class="inputContainer">
-            <input type="password" class="input" placeholder="" required>
+            <input type="password" class="input" placeholder="" formControlName="password">
             <label for="" class="label">Contraseña</label>
           </div>
   
-          <button type="button" class="btn-classic"> Ingresar </button>
+          <button type="submit" class="btn-classic" value="Log In"> Ingresar </button>
         </form>
       </div>
   
