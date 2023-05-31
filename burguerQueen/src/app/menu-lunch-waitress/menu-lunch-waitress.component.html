@@ -1,1 +1,58 @@
-<p>menu-lunch-waitress works!</p>
+<div>
+    <div class="sect-tittle">
+        <h1>Menú</h1>
+    </div>
+    <div class="sect-btns">
+        <a [routerLink]="['/menu/breakfast']">
+            <button type="button" class="btn-classic-b">Desayuno</button>
+        </a>
+        <button type="button" class="btn-classic">Comida</button>
+    </div>
+
+    <div class="btns-aside">
+        <aside>
+            <a routerLink="">
+                <button type="button" class="btn-shop"
+                style="background-image:url(/assets/images/btn-lg-shop.png);"></button>
+            </a>
+        </aside>
+
+        <aside>
+            <button type="button" class="btn-note"
+                style="background-image:url(/assets/images/btn-dark-note.png);"></button>
+        </aside>
+
+        <aside>
+            <a [routerLink]="['']">
+                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            </a>
+        </aside>
+
+    </div>
+
+    <div class="buttons-menu">
+        <button type="button" class="btn-food" id="hamburguer"
+            style="background-image:url(/assets/images/hamburguer.png);"></button>
+        <button type="button" class="btn-food" id="french-fries"
+            style="background-image:url(/assets/images/french-fries.png);"></button>
+        <button type="button" class="btn-food" id="soda"
+            style="background-image:url(/assets/images/soda.png);"></button>
+        <button type="button" class="btn-food" id="water"
+            style="background-image:url(/assets/images/water.png);"></button>
+    </div>
+
+    <div>
+        <article class="order">
+            <div>
+                <h2>Orden</h2>
+            </div>
+            <div class="info-users">
+                <div id="user">Mariana</div>
+                <div id="customer">andrea</div>
+            </div>
+        </article>
+
+        <button type="button" id="send-kitchen">Enviar a Cocina</button>
+    </div>
+
+</div>

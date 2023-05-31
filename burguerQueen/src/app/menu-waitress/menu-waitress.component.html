@@ -4,7 +4,9 @@
     </div>
     <div class="sect-btns">
         <button type="button" class="btn-classic">Desayuno</button>
-        <button type="button" class="btn-classic-b">Comida</button>
+        <a [routerLink]="['/menu/lunch']">
+            <button type="button" class="btn-classic-b">Comida</button>
+        </a>
     </div>
 
     <div class="btns-aside">
@@ -19,7 +21,9 @@
         </aside>
 
         <aside>
-            <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            <a [routerLink]="['']">
+                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            </a>
         </aside>
 
     </div>
@@ -27,11 +31,11 @@
     <div class="buttons-menu">
         <button type="button" class="btn-food" id="sandwich"
             style="background-image:url(/assets/images/sandwich.png);"></button>
-        <button type="button" class="btn-food" id="juice-fruit"
+        <button type="button" class="btn-food" id="american-coffee"
             style="background-image:url(/assets/images/american-coffee.png);"></button>
         <button type="button" class="btn-food" id="latte"
             style="background-image:url(/assets/images/latte.png);"></button>
-        <button type="button" class="btn-food" id="american-coffee"
+        <button type="button" class="btn-food" id="fruit-juice"
             style="background-image:url(/assets/images/fruit-juice.png);"></button>
     </div>
 
