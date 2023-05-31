@@ -18,36 +18,40 @@ export class LoginComponent {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private authLog:AuthService, private router:Router) {}
+  constructor(private authLog: AuthService, private router: Router) { }
 
-  errorstatus:boolean = false;
-  errorMsg:any = '';
+  errorstatus: boolean = false;
+  errorMsg: any = '';
 
   ngOnInit(): void {
     this.checkLocalStorage
   }
 
   checkLocalStorage() {
-    if(localStorage.getItem('accessToken')) {
+    if (localStorage.getItem('token')) {
       this.router.navigate(['menu/breakfast']);
     }
   }
 
   onLogin(form: LoginI) {
     this.authLog.loginByEmail(form).subscribe(data => {
-      let dataResp:ResponseI = data;
-      console.log('Este es data', data);
-      
-      if(dataResp.accessToken) {
+      let dataResp: ResponseI = data;
+      console.log('Este es data', dataResp);
+
+      if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
         this.router.navigate(['menu/breakfast']);
-      } else {
-        this.errorstatus = true;
-        this.errorMsg = dataResp.status.errorMsg;
+        if (dataResp.user === 'admin') {
+          this.router.navigate(['add/products']);
+        }
+        if (dataResp.user === 'waitress') {
+          this.router.navigate(['menu/breakfast']);
+        }
+
       }
-      
+
     })
-    
+
   }
 
 }
