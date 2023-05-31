@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginI } from '../models/login.interface';
+import { ResponseI } from '../models/response.interface';
+
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,7 +26,13 @@ export class LoginComponent {
 
   onLogin(form: LoginI) {
     this.authLog.loginByEmail(form).subscribe(data => {
+      let dataResp:ResponseI = data;
       console.log(data);
+      
+      if(dataResp.accessToken) {
+        localStorage.setItem('token', dataResp.accessToken);
+        this.router.navigate(['menu/breakfast']);
+      }
       
     })
     
