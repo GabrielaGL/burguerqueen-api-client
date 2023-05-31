@@ -1,6 +1,5 @@
 export interface ResponseI {
    accessToken: string;
+   user: number;
    userRole: string;
-   subscription: any;
-   status:any;
 }

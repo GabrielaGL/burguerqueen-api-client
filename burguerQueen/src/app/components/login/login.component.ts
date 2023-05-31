@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoginI } from '../models/login.interface';
-import { ResponseI } from '../models/response.interface';
+import { LoginI } from '../../models/login.interface';
+import { ResponseI } from '../../models/response.interface';
 
 import { Router } from '@angular/router';
 
@@ -33,18 +33,25 @@ export class LoginComponent {
     }
   }
 
-  onLogin(form: LoginI) {
+  onLogin(form:any) {
+    const info:LoginI = form
+    console.log('este es form', info);
+    
     this.authLog.loginByEmail(form).subscribe(data => {
-      let dataResp: ResponseI = data;
+      let dataResp: ResponseI = {
+        accessToken:data.accessToken,
+        user:data.user.id,
+        userRole:data.user.role
+      }
       console.log('Este es data', dataResp);
 
       if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
         this.router.navigate(['menu/breakfast']);
-        if (dataResp.user === 'admin') {
+        if (dataResp.userRole === 'admin') {
           this.router.navigate(['add/products']);
         }
-        if (dataResp.user === 'waitress') {
+        if (dataResp.userRole === 'waitress') {
           this.router.navigate(['menu/breakfast']);
         }
 

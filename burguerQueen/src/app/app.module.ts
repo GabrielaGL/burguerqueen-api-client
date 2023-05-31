@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { MenuWaitressComponent } from './menu-waitress/menu-waitress.component';
-import { OrdersWaitressComponent } from './orders-waitress/orders-waitress.component';
-import { MenuLunchWaitressComponent } from './menu-lunch-waitress/menu-lunch-waitress.component';
+import { LoginComponent } from './components/login/login.component';
+import { MenuWaitressComponent } from './components/menu-waitress/menu-waitress.component';
+import { OrdersWaitressComponent } from './components/orders-waitress/orders-waitress.component';
+import { MenuLunchWaitressComponent } from './components/menu-lunch-waitress/menu-lunch-waitress.component';
 import { AddWaitressComponent } from './add-waitress/add-waitress.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuWaitressComponent,
     OrdersWaitressComponent,
     MenuLunchWaitressComponent,
-    AddWaitressComponent
+    AddWaitressComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
