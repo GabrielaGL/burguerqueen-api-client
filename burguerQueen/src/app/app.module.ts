@@ -10,8 +10,13 @@ import { MenuLunchWaitressComponent } from './components/menu-lunch-waitress/men
 import { AddWaitressComponent } from './components/add-waitress/add-waitress.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductsComponent } from './components/products/products.component';
+
+import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
+import { AddChefComponent } from './components/add-chef/add-chef.component';
+import { AddProductsComponent } from './components/add-products/add-products.component';
+import { KitchenComponent } from './components/kitchen/kitchen.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,10 @@ import { ProductsComponent } from './components/products/products.component';
     OrdersWaitressComponent,
     MenuLunchWaitressComponent,
     AddWaitressComponent,
-    ProductsComponent
+    ProductsComponent,
+    AddChefComponent,
+    AddProductsComponent,
+    KitchenComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,14 @@ import { ProductsComponent } from './components/products/products.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      // in the case a new interceptor is needed
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
