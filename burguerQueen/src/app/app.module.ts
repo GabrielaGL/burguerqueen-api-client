@@ -16,6 +16,7 @@ import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { AddChefComponent } from './components/add-chef/add-chef.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
+import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
     AddWaitressComponent,
     AddChefComponent,
     AddProductsComponent,
-    KitchenComponent
+    KitchenComponent,
+    AddProductsLunchComponent
   ],
   imports: [
     BrowserModule,

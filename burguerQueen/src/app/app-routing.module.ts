@@ -9,6 +9,7 @@ import { AddWaitressComponent } from './components/add-waitress/add-waitress.com
 import { AddChefComponent } from './components/add-chef/add-chef.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
+import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path:'orders', component:OrdersWaitressComponent },
   { path:'add/waitress', component:AddWaitressComponent, pathMatch:'full' },
   { path:'add/chef', component:AddChefComponent, pathMatch:'full' },
-  { path:'add/products/breakfast', pathMatch:'full' },
+  { path:'add/products/breakfast', component:AddProductsLunchComponent, pathMatch:'full' },
   { path:'add/products/lunch', component:AddProductsComponent, pathMatch:'full' },
   { path:'kitchen', component:KitchenComponent }
 
