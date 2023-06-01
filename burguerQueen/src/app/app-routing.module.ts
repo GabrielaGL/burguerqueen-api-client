@@ -19,8 +19,8 @@ const routes: Routes = [
   { path:'orders', component:OrdersWaitressComponent },
   { path:'add/waitress', component:AddWaitressComponent, pathMatch:'full' },
   { path:'add/chef', component:AddChefComponent, pathMatch:'full' },
-  { path:'add/products/breakfast', component:AddProductsLunchComponent, pathMatch:'full' },
-  { path:'add/products/lunch', component:AddProductsComponent, pathMatch:'full' },
+  { path:'add/products/lunch', component:AddProductsLunchComponent, pathMatch:'full' },
+  { path:'add/products/breakfast', component:AddProductsComponent, pathMatch:'full' },
   { path:'kitchen', component:KitchenComponent }
 
 ];

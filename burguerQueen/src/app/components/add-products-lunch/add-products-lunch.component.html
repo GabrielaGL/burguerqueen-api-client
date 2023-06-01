@@ -1,1 +1,75 @@
-<p>add-products-lunch works!</p>
+<div>
+    <div class="sect-tittle">
+        <h1>Menu</h1>
+    </div>
+    <div class="sect-btns">
+        <a [routerLink]="['/add/products/breakfast']">
+            <button type="button" class="btn-classic-b">Desayuno</button>
+        </a>
+        <button type="button" class="btn-classic">Comida</button>
+    </div>
+
+    <div class="btns-aside">
+        <aside>
+            <a [routerLink]="['/add/waitress']">
+                <button type="button" class="btn-user"
+                style="background-image:url(/assets/images/btn-dark-user.png);"></button>
+            </a>
+        </aside>
+
+        <aside>
+            <button type="button" class="btn-note"
+                style="background-image:url(/assets/images/btn-lg-note.png);"></button>
+        </aside>
+
+        <aside>
+            <a [routerLink]="['']">
+                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            </a>
+        </aside>
+
+    </div>
+
+    <div class="add-user">
+        <article class="user-info">
+            <p id="user">Usuario</p>
+            <p id="name-user">Nombre</p>
+            <p id="role">Rol</p>
+            <p id="email">Email</p>
+        </article>
+    </div>
+
+    <div>
+        <article class="order">
+            <form action="">
+                <div class="tittle">
+                    <h2>Agregar meserx</h2>
+                </div> 
+
+                <div class="inputContainer">
+                    <input type="text" class="input" placeholder="">
+                    <label for="" class="label">Usuario </label>
+                </div>
+                
+                <div class="inputContainer">
+                    <input type="text" class="input" placeholder="">
+                    <label for="" class="label">Nombre </label>
+                </div>
+                
+                <div class="inputContainer">
+                    <input type="text" class="input" placeholder="">
+                    <label for="" class="label">Rol </label>
+                </div>
+                
+                <div class="inputContainer">
+                    <input type="text" class="input" placeholder="">
+                    <label for="" class="label">Contraseña </label>
+                </div>
+
+                <button type="button" id="cancel-user">Cancelar</button>
+                <button type="button" id="new-user">Aceptar</button>
+            </form>        
+        </article>
+    </div>
+
+</div>

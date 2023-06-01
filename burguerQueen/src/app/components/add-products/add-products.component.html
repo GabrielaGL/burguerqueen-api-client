@@ -3,21 +3,23 @@
         <h1>Menu</h1>
     </div>
     <div class="sect-btns">
-        <button type="button" class="btn-classic">Meserxs</button>
-        <a [routerLink]="['/add/chef']">
-            <button type="button" class="btn-classic-b">Chef</button>
+        <button type="button" class="btn-classic">Desayuno</button>
+        <a [routerLink]="['/add/products/lunch']">
+            <button type="button" class="btn-classic-b">Comida</button>
         </a>
     </div>
 
     <div class="btns-aside">
         <aside>
-            <button type="button" class="btn-user"
-                style="background-image:url(/assets/images/btn-lg-user.png);"></button>
+            <a [routerLink]="['/add/waitress']">
+                <button type="button" class="btn-user"
+                style="background-image:url(/assets/images/btn-dark-user.png);"></button>
+            </a>
         </aside>
 
         <aside>
             <button type="button" class="btn-note"
-                style="background-image:url(/assets/images/btn-dark-note.png);"></button>
+                style="background-image:url(/assets/images/btn-lg-note.png);"></button>
         </aside>
 
         <aside>
