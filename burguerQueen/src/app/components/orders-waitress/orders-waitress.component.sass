@@ -1,0 +1,47 @@
+@import /src/styles.sass
+
+.sect-tittle
+	@include flex-center
+	align-items: center
+
+.sect-btns
+	@extend .sect-tittle
+	margin-left: -82px
+
+h1
+	@include tittles
+	font-size: 85px
+	margin-bottom: 35px
+	margin-top: 25px
+
+.btn-classic
+	@include btnclassic
+	color: $dark-color
+	border: 2px solid $btn-orange
+	background-color: $lg-color
+	margin-right: 104px
+
+.btn-classic-b
+	@extend .btn-classic
+	background-color: $btn-orange
+
+.btns-aside
+	width: 180px
+	margin-top: 50px
+
+aside
+	@include flex-center
+
+.btn-shop
+	@include btnshop
+
+.btn-note
+	@include btnnote
+
+.btn-back
+	@include btnback
+
+.buttons-menu
+	width: 600px
+	margin-top: -430px
+	margin-left: 250px

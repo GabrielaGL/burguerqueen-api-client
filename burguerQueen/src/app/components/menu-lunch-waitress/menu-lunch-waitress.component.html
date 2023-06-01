@@ -11,15 +11,15 @@
 
     <div class="btns-aside">
         <aside>
-            <a routerLink="">
-                <button type="button" class="btn-shop"
-                    style="background-image:url(/assets/images/btn-lg-shop.png);"></button>
-            </a>
+            <button type="button" class="btn-shop"
+                style="background-image:url(/assets/images/btn-lg-shop.png);"></button>
         </aside>
 
         <aside>
-            <button type="button" class="btn-note"
-                style="background-image:url(/assets/images/btn-dark-note.png);"></button>
+            <a [routerLink]="['/orders']">
+                <button type="button" class="btn-note"
+                    style="background-image:url(/assets/images/btn-dark-note.png);"></button>
+            </a>
         </aside>
 
         <aside>
