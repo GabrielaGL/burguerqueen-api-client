@@ -57,11 +57,21 @@ aside
 	width: 326px
 	height: 470px
 
-h2
-	@include tittles
-	font-size: 51px
-	margin-top: 2px
-	margin-bottom: 3px
+.tittle
+	@include flex-center
+	h2
+		@include tittles
+		font-size: 51px
+		margin-top: 2px
+		margin-bottom: 3px
+
+.inputContainer
+	position: relative
+	height: 45px
+	width: 90%
+	margin-bottom: 5px
+	color: $dark-color
+	font-size: 18px
 
 #send-kitchen
 	@extend .btn-classic-b
