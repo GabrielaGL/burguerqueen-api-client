@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { OrdersService } from '../../services/admin.service';
 
 @Component({
   selector: 'app-add-products',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-products.component.sass']
 })
 export class AddProductsComponent {
+  constructor(private api:OrdersService) {}
+
+  ngOnInit():void {
+    this.api.getProducts().subscribe(data => {
+      console.log(data);
+      return
+    })
+  }
 
 }

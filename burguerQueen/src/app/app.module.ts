@@ -11,7 +11,6 @@ import { AddWaitressComponent } from './components/add-waitress/add-waitress.com
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ProductsComponent } from './components/products/products.component';
 
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { AddChefComponent } from './components/add-chef/add-chef.component';
@@ -26,7 +25,6 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
     OrdersWaitressComponent,
     MenuLunchWaitressComponent,
     AddWaitressComponent,
-    ProductsComponent,
     AddChefComponent,
     AddProductsComponent,
     KitchenComponent
