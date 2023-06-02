@@ -47,12 +47,14 @@ export class LoginComponent {
 
       if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
-        this.router.navigate(['menu/breakfast']);
         if (dataResp.userRole === 'admin') {
-          this.router.navigate(['add/products']);
+          this.router.navigate(['add/products/lunch']);
         }
         if (dataResp.userRole === 'waitress') {
           this.router.navigate(['menu/breakfast']);
+        }
+        if (dataResp.userRole === 'chef') {
+          this.router.navigate(['kitchen']);
         }
 
       }
