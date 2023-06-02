@@ -1,0 +1,144 @@
+@import /src/styles.sass
+
+.sect-tittle
+	@include flex-center
+	align-items: center
+
+.sect-btns
+	@extend .sect-tittle
+	margin-left: -188px
+
+h1
+	@include tittles
+	font-size: 85px
+	margin-bottom: 35px
+	margin-top: 25px
+
+.btn-classic
+	@include btnclassic
+	color: $dark-color
+	border: 2px solid $btn-orange
+	background-color: $lg-color
+	margin-right: 35px
+
+.btn-classic-b
+	@extend .btn-classic
+	background-color: $btn-orange
+
+.btns-aside
+	width: 180px
+
+aside
+	@include flex-center
+
+.btn-user
+	@include btnshop
+
+.btn-note
+	@include btnnote
+
+.btn-back
+	@include btnback
+
+.add-user
+	border-radius: 7px
+	border: 2px solid $dark-color
+	width: 572px
+	height: 519px
+	margin-left: 200px
+	margin-top: -430px
+
+.user-info
+	border-radius: 7px
+	border: 2px solid $dark-color
+	width: 150px
+	height: 150px
+
+.content-form
+	width: 185px
+	height: 470px
+
+.order
+	@include flex-center
+	border-radius: 7px
+	border: 2px solid $btn-orange
+	margin-top: -610px
+	margin-left: 800px
+	width: 326px
+	height: 513px
+
+.tittle
+	@include flex-center
+	background-color: $btn-orange
+	width: 327px
+	height: 40px
+	margin-bottom: 38px
+	h2
+		font-family: $font-content
+		font-size: 28px
+		color: $lg-color
+		margin-top: 2px
+		margin-bottom: 10px
+
+.inputContainer
+	position: relative
+	height: 45px
+	width: 42%
+	margin-bottom: 45px
+	margin-left: 31px
+	color: $btn-orange
+	font-size: 18px
+
+.input
+	position: absolute
+	top: 0px
+	left: 0px
+	height: 100%
+	width: 160%
+	border: 2px solid $btn-orange
+	border-radius: 7px
+	font-size: 18px
+	padding: 0 20px
+	outline: none
+	background: none
+	z-index: 1
+	&:focus+.label
+		top: -20px
+		left: 3px
+		z-index: 10
+		font-size: 16px
+		font-weight: 600
+		color: $dark-orange
+
+::placeholder
+	color: transparent
+
+.label
+	position: absolute
+	top: 15px
+	left: 15px
+	padding: 0 4px
+	color: #DADCE0
+	font-family: $font-content
+	font-size: 18px
+	transition: 0.5s
+	z-index: 0
+
+.input:not(:placeholder-shown)+.label
+	top: -20px
+	left: 3px
+	z-index: 10
+	font-size: 14px
+	font-weight: 600
+
+#cancel-user
+	@include btnclassic
+	background-color: $red-color
+	color: $lg-color
+	font-size: 15px
+	margin-right: 16px
+	margin-left: 20px
+
+#new-user
+	@extend #cancel-user
+	background-color: $green-color

@@ -17,6 +17,7 @@ import { AddChefComponent } from './components/add-chef/add-chef.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
+import { AddAdminComponent } from './components/add-admin/add-admin.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AddProductsLunchComponent } from './components/add-products-lunch/add-p
     AddChefComponent,
     AddProductsComponent,
     KitchenComponent,
-    AddProductsLunchComponent
+    AddProductsLunchComponent,
+    AddAdminComponent
   ],
   imports: [
     BrowserModule,
