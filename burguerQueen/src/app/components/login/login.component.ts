@@ -20,6 +20,7 @@ export class LoginComponent {
 
   constructor(private authLog: AuthService, private router: Router) { }
 
+  //TODO: Modal con msj de error para usuario incorrecto
   errorstatus: boolean = false;
   errorMsg: any = '';
 
@@ -35,7 +36,6 @@ export class LoginComponent {
 
   onLogin(form:any) {
     const info:LoginI = form
-    console.log('este es form', info);
     
     this.authLog.loginByEmail(form).subscribe(data => {
       let dataResp: ResponseI = {
@@ -43,12 +43,11 @@ export class LoginComponent {
         user:data.user.id,
         userRole:data.user.role
       }
-      console.log('Este es data', dataResp);
 
       if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
         if (dataResp.userRole === 'admin') {
-          this.router.navigate(['add/products/lunch']);
+          this.router.navigate(['add/waitress']);
         }
         if (dataResp.userRole === 'waitress') {
           this.router.navigate(['menu/breakfast']);
