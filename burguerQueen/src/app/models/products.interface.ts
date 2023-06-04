@@ -1,9 +1,8 @@
 export interface productsI {
-    qty:any;
-    id:any;
-    name:any;
-    price:any;
+    id:number;
+    name:string;
+    price:number;
     image:any;
-    type:any;
+    type:string;
     dateEntry:any;
 }
