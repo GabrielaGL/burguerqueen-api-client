@@ -13,7 +13,7 @@
         <aside>
             <a [routerLink]="['/add/waitress']">
                 <button type="button" class="btn-user"
-                style="background-image:url(/assets/images/btn-dark-user.png);"></button>
+                    style="background-image:url(/assets/images/btn-dark-user.png);"></button>
             </a>
         </aside>
 
@@ -24,43 +24,46 @@
 
         <aside>
             <a [routerLink]="['']">
-                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+                <button type="button" class="btn-back"
+                    style="background-image:url(/assets/images/btn-back.png);"></button>
             </a>
         </aside>
 
     </div>
 
-    <div class="add-user">
-        <article class="user-info">
-            <p id="user">Usuario</p>
-            <p id="name-user">Nombre</p>
-            <p id="role">Rol</p>
-            <p id="email">Email</p>
+    <div class="list-products">
+        <article class="product" *ngFor="let product of filteredProducts">
+            <img class="img-menu" src="{{product.image}}" alt="">
+            <p id="name-product">Nombre: {{product.name}}</p>
+            <p id="price-product">Precio: {{product.price}}</p>
+            <button type="button" class="btn-edit" style="background-image:url(/assets/images/edit-btn.png);"></button>
+            <button type="button" class="btn-edit"
+                style="background-image:url(/assets/images/delete-btn.png);"></button>
         </article>
     </div>
 
-    <div>
+    <div class="add-products">
         <article class="order">
             <form action="">
                 <div class="tittle">
                     <h2>Agregar producto</h2>
-                </div> 
+                </div>
 
                 <div class="inputContainer">
                     <input type="text" class="input" placeholder="">
                     <label for="" class="label">Nombre</label>
                 </div>
-                
+
                 <div class="inputContainer">
                     <input type="text" class="input" placeholder="">
                     <label for="" class="label">Precio</label>
                 </div>
-                
+
                 <div class="inputContainer">
                     <input type="text" class="input" placeholder="">
                     <label for="" class="label">Imagen</label>
                 </div>
-                
+
                 <div class="inputContainer">
                     <select name="Tipo" id="" class="type-selector">
                         <option value="Desayuno">Desayuno</option>
@@ -70,9 +73,8 @@
 
                 <button type="button" id="cancel-user">Cancelar</button>
                 <button type="button" id="new-user">Aceptar</button>
-            </form>        
+            </form>
         </article>
     </div>
 
 </div>
-

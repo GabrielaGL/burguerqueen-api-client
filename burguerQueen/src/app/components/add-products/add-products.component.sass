@@ -7,6 +7,7 @@
 .sect-btns
 	@extend .sect-tittle
 	margin-left: -82px
+	margin-top: -24px
 
 h1
 	@include tittles
@@ -40,27 +41,50 @@ aside
 .btn-back
 	@include btnback
 
-.add-user
-	border-radius: 7px
-	border: 2px solid $dark-color
+.list-products
 	width: 572px
-	height: 519px
+	height: 441px
 	margin-left: 200px
 	margin-top: -430px
 
-.user-info
+.product
 	border-radius: 7px
 	border: 2px solid $dark-color
-	width: 150px
-	height: 150px
 	line-height: 0.5
 	text-align: center
+	width: 265px
+	height: 271px
+	display: inline-block
+	margin-right: 5px
+	margin-left: 5px
+	margin-bottom: 5px
+	margin-top: 5px
+	.imgs-products
+		margin-right: 5px
+		margin-left: 5px
+		display: flex
+		width: 255px
+		height: 141px
+	.img-menu
+		width: 150px
+		height: 150px
+		background-size: cover
+		background-color: transparent
+		border: none
+	.btn-edit
+		border: none
+		background-color: transparent
+		background-size: cover
+		width: 50px
+		height: 50px
+		margin-left: 25px
+		margin-right: 25px
 
 .order
 	@include flex-center
 	border-radius: 7px
 	border: 2px solid $btn-orange
-	margin-top: -610px
+	margin-top: -514px
 	margin-left: 800px
 	width: 326px
 	height: 513px
