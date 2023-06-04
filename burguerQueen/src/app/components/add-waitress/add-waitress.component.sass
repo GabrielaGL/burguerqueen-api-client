@@ -40,21 +40,31 @@ aside
 .btn-back
 	@include btnback
 
-.add-user
-	border-radius: 7px
-	border: 2px solid $dark-color
-	width: 572px
+.list-workers
+	width: 359px
 	height: 519px
-	margin-left: 200px
+	margin-left: 310px
 	margin-top: -430px
 
-.user-info
+.worker
 	border-radius: 7px
 	border: 2px solid $dark-color
-	width: 150px
-	height: 150px
+	width: 345px
+	height: 153px
 	line-height: 0.5
-	text-align: center
+	margin-bottom: 10px
+	margin-top: 10px
+	padding-left: 10px
+	.nickname-worker
+		text-align: center
+		font-size: 25px
+		font-weight: bold
+		color: $dark-orange
+		margin-top: 10px
+	.btn-edit, .btn-delete
+		@include btnsEditDel
+		margin-left: 70px
+		margin-right: 45px
 
 .order
 	@include flex-center
