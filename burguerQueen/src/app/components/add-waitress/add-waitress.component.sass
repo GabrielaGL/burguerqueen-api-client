@@ -41,26 +41,12 @@ aside
 	@include btnback
 
 .list-workers
-	width: 359px
-	height: 519px
-	margin-left: 310px
-	margin-top: -430px
+	@include listWorkers
 
 .worker
-	border-radius: 7px
-	border: 2px solid $dark-color
-	width: 345px
-	height: 153px
-	line-height: 0.5
-	margin-bottom: 10px
-	margin-top: 10px
-	padding-left: 10px
+	@include worker
 	.nickname-worker
-		text-align: center
-		font-size: 25px
-		font-weight: bold
-		color: $dark-orange
-		margin-top: 10px
+		@include nicknameWorker
 	.btn-edit, .btn-delete
 		@include btnsEditDel
 		margin-left: 70px
