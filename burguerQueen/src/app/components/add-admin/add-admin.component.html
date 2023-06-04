@@ -34,12 +34,14 @@
 
     </div>
 
-    <div class="add-user">
-        <article class="user-info">
-            <p id="user">Usuario</p>
-            <p id="name-user">Nombre</p>
-            <p id="role">Rol</p>
-            <p id="email">Email</p>
+    <div class="list-workers">
+        <article class="worker" *ngFor="let worker of filteredWorkers">
+            <p class="nickname-worker">{{worker.nickname}}</p>
+            <p class="name-worker">Nombre: {{worker.name}}</p>
+            <p class="email-worker">Email: {{worker.email}}</p>
+            <button type="button" class="btn-edit" style="background-image:url(/assets/images/edit-btn.png);"></button>
+            <button type="button" class="btn-delete"
+                style="background-image:url(/assets/images/delete-btn.png);"></button>
         </article>
     </div>
 
