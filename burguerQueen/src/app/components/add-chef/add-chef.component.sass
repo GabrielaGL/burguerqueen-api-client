@@ -40,19 +40,17 @@ aside
 .btn-back
 	@include btnback
 
-.add-user
-	border-radius: 7px
-	border: 2px solid $dark-color
-	width: 572px
-	height: 519px
-	margin-left: 200px
-	margin-top: -430px
+.list-workers
+	@include listWorkers
 
-.user-info
-	border-radius: 7px
-	border: 2px solid $dark-color
-	width: 150px
-	height: 150px
+.worker
+	@include worker
+	.nickname-worker
+		@include nicknameWorker
+	.btn-edit, .btn-delete
+		@include btnsEditDel
+		margin-left: 70px
+		margin-right: 45px
 
 .content-form
 	width: 185px
