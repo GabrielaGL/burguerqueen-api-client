@@ -32,14 +32,9 @@
     </div>
 
     <div class="buttons-menu">
-        <button type="button" class="btn-food" id="hamburguer"
-            style="background-image:url(/assets/images/hamburguer.png);"></button>
-        <button type="button" class="btn-food" id="french-fries"
-            style="background-image:url(/assets/images/french-fries.png);"></button>
-        <button type="button" class="btn-food" id="soda"
-            style="background-image:url(/assets/images/soda.png);"></button>
-        <button type="button" class="btn-food" id="water"
-            style="background-image:url(/assets/images/water.png);"></button>
+        <div class="container-food" *ngFor="let product of filteredProducts">
+            <button type="button" class="btn-food" style="background-image:url({{product.image}});"></button>
+        </div>
     </div>
 
     <div>
