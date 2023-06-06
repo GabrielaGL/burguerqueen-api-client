@@ -24,21 +24,17 @@
 
         <aside>
             <a [routerLink]="['']">
-                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+                <button type="button" class="btn-back"
+                    style="background-image:url(/assets/images/btn-back.png);"></button>
             </a>
         </aside>
 
     </div>
 
     <div class="buttons-menu">
-        <button type="button" class="btn-food" id="sandwich"
-            style="background-image:url(/assets/images/sandwich.png);"></button>
-        <button type="button" class="btn-food" id="american-coffee"
-            style="background-image:url(/assets/images/american-coffee.png);"></button>
-        <button type="button" class="btn-food" id="latte"
-            style="background-image:url(/assets/images/latte.png);"></button>
-        <button type="button" class="btn-food" id="fruit-juice"
-            style="background-image:url(/assets/images/fruit-juice.png);"></button>
+        <div class="container-food" *ngFor="let product of filteredProducts">
+            <button type="button" class="btn-food" style="background-image:url({{product.image}});"></button>
+        </div>
     </div>
 
     <div>
