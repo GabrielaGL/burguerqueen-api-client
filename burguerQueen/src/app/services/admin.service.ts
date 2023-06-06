@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { productsI } from '../models/products.interface';
 import { Observable } from 'rxjs';
 import { workersI } from '../models/workers.interface';
+import { responsepostI } from '../models/responsepost';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,10 @@ export class OrdersService {
   getWorkers():Observable<workersI[]> {
     let url = this.url + 'users';
     return this.http.get<workersI[]>(url);
+  }
+
+  postWorker(form:workersI):Observable<responsepostI> {
+    let url = this.url + 'users'; 
+    return this.http.post<responsepostI>(url, form);
   }
 }
