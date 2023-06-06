@@ -47,33 +47,33 @@
 
     <div>
         <article class="order">
-            <form action="">
+            <form [formGroup]="newUser" (ngSubmit)="addUser(newUser.value)">
                 <div class="tittle">
-                    <h2>Agregar admin</h2>
+                    <h2>Agregar Admin</h2>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="nickname">
                     <label for="" class="label">Usuario </label>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="name">
                     <label for="" class="label">Nombre </label>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
-                    <label for="" class="label">Rol </label>
+                    <input type="email" class="input" placeholder="" formControlName="email">
+                    <label for="" class="label">Email </label>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="password">
                     <label for="" class="label">Contraseña </label>
                 </div>
 
-                <button type="button" id="cancel-user">Cancelar</button>
-                <button type="button" id="new-user">Aceptar</button>
+                <button type="reset" id="cancel-user">Cancelar</button>
+                <button type="submit" id="new-user">Aceptar</button>
             </form>
         </article>
     </div>
