@@ -33,4 +33,9 @@ export class OrdersService {
     let url = this.url + 'products'; 
     return this.http.post<responsepostI>(url, form);
   }
+
+  getSingleWorker(id:any):Observable<workersI> {
+    let url = this.url + 'users/' + id;
+    return this.http.get<workersI>(url);
+  }
 }

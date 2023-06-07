@@ -4,4 +4,5 @@ export interface workersI {
     name: string;
     email:string;
     role:string;
+    image:string;
 }
