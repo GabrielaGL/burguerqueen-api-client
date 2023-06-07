@@ -28,4 +28,9 @@ export class OrdersService {
     let url = this.url + 'users'; 
     return this.http.post<responsepostI>(url, form);
   }
+
+  postProducts(form:productsI):Observable<responsepostI> {
+    let url = this.url + 'products'; 
+    return this.http.post<responsepostI>(url, form);
+  }
 }
