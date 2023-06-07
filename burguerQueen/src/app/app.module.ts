@@ -20,6 +20,7 @@ import { AddProductsLunchComponent } from './components/add-products-lunch/add-p
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
 
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
+import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
     AddProductsComponent,
     KitchenComponent,
     AddProductsLunchComponent,
-    AddAdminComponent
+    AddAdminComponent,
+    WorkerDetailsComponent
   ],
   imports: [
     BrowserModule,

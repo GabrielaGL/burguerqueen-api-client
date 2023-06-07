@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './components/login/login.component';
@@ -11,6 +11,7 @@ import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { AddProductsComponent } from './components/add-products/add-products.component';
 import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
+import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path:'add/waitress', component:AddWaitressComponent, pathMatch:'full' },
   { path:'add/chef', component:AddChefComponent, pathMatch:'full' },
   { path:'add/admin', component:AddAdminComponent, pathMatch:'full' },
+  { path: 'details/:id', component:WorkerDetailsComponent },
   { path:'add/products/lunch', component:AddProductsLunchComponent, pathMatch:'full' },
   { path:'add/products/breakfast', component:AddProductsComponent, pathMatch:'full' },
   { path:'kitchen', component:KitchenComponent }
