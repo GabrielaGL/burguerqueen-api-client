@@ -28,13 +28,13 @@ export class AddChefComponent {
     this.api.getWorkers().subscribe(data => {
       this.workers = data
       this.filteredWorkers = data.filter(worker => worker.role === "chef");
-      return
     })
   }
 
   addUser(form:any) {
     const info:workersI = form
     this.api.postWorker(info).subscribe(data => {
+      //TODO: Agregar modal que muestre que resultó
     console.log(data);
     })    
   }

@@ -18,8 +18,7 @@ export class MenuWaitressComponent {
   ngOnInit():void {
     this.api.getProducts().subscribe(data => {
       this.products = data
-      this.filteredProducts = data.filter(product => product.type === "Desayuno");     
-      return
+      this.filteredProducts = data.filter(product => product.type === "Desayuno");
     })
   }
 
