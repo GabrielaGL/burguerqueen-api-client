@@ -1,0 +1,65 @@
+@import /src/styles.sass
+
+.sect-tittle
+	@include flex-center
+	align-items: center
+
+.sect-btns
+	@extend .sect-tittle
+	margin-left: -188px
+
+h1
+	@include tittles
+	font-size: 85px
+	margin-bottom: 35px
+	margin-top: 25px
+
+.btn-classic
+	@include btnclassic
+	color: $dark-color
+	border: 2px solid $btn-orange
+	background-color: $lg-color
+	margin-right: 35px
+
+.btn-classic-b
+	@extend .btn-classic
+	background-color: $btn-orange
+
+.btns-aside
+	width: 180px
+
+aside
+	@include flex-center
+
+.btn-user
+	@include btnshop
+
+.btn-note
+	@include btnnote
+
+.btn-back
+	@include btnback
+
+.detail-workers
+	@include product
+	height: 467px
+	width: 511px
+	margin-left: 396px
+	margin-top: -390px
+	.img-worker
+		@include imgMenu
+		width: 200px
+		height: 200px
+		margin-top: 15px
+	.nickname-worker
+		font-size: 40px
+		font-weight: bold
+		color: $dark-orange
+	.worker
+		font-size: 20px
+	.btn-edit, .btn-delete
+		@include btnsEditDel
+		width: 80px
+		height: 80px
+		margin-left: 70px
+		margin-right: 45px
