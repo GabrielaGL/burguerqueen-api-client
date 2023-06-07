@@ -44,35 +44,28 @@
 
     <div class="add-products">
         <article class="order">
-            <form action="">
+            <form [formGroup]="newProduct" (ngSubmit)="addProductB(newProduct.value)">
                 <div class="tittle">
                     <h2>Agregar producto</h2>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="name">
                     <label for="" class="label">Nombre</label>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="price">
                     <label for="" class="label">Precio</label>
                 </div>
 
                 <div class="inputContainer">
-                    <input type="text" class="input" placeholder="">
+                    <input type="text" class="input" placeholder="" formControlName="image">
                     <label for="" class="label">Imagen</label>
                 </div>
 
-                <div class="inputContainer">
-                    <select name="Tipo" id="" class="type-selector">
-                        <option value="Desayuno">Desayuno</option>
-                        <option value="Comida">Comida</option>
-                    </select>
-                </div>
-
-                <button type="button" id="cancel-user">Cancelar</button>
-                <button type="button" id="new-user">Aceptar</button>
+                <button type="reset" id="cancel-user">Cancelar</button>
+                <button type="submit" id="new-user">Aceptar</button>
             </form>
         </article>
     </div>
