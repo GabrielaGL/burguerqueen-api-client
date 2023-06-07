@@ -25,24 +25,21 @@ export class LoginComponent {
   errorMsg: any = '';
 
   ngOnInit(): void {
-    this.checkLocalStorage
+
   }
 
-  checkLocalStorage() {
-    if (localStorage.getItem('token')) {
-      this.router.navigate(['menu/breakfast']);
-    }
-  }
 
   onLogin(form:any) {
     const info:LoginI = form
     
-    this.authLog.loginByEmail(form).subscribe(data => {
+    this.authLog.loginByEmail(info).subscribe(data => {
       let dataResp: ResponseI = {
         accessToken:data.accessToken,
         user:data.user.id,
         userRole:data.user.role
       }
+      console.log(dataResp);
+      
 
       if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
