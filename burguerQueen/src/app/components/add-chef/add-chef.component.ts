@@ -18,7 +18,8 @@ export class AddChefComponent {
     name: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     role: new FormControl('chef'),
-    password: new FormControl('', Validators.required)
+    password: new FormControl('', Validators.required),
+    image: new FormControl('', Validators.required)
   })
 
 

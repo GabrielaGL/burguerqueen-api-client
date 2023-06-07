@@ -18,7 +18,9 @@ export class AddAdminComponent {
     name: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     role: new FormControl('admin'),
-    password: new FormControl('', Validators.required)
+    password: new FormControl('', Validators.required),
+    image: new FormControl('', Validators.required)
+
   })
 
 
