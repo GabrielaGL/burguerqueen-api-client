@@ -28,7 +28,6 @@ export class AddAdminComponent {
     this.api.getWorkers().subscribe(data => {
       this.workers = data
       this.filteredWorkers = data.filter(worker => worker.role === "admin");
-      return
     })
   }
 
