@@ -58,7 +58,7 @@ aside
 	margin-top: -610px
 	margin-left: 800px
 	width: 326px
-	height: 470px
+	height: 556px
 
 .tittle
 	@include flex-center
@@ -71,13 +71,33 @@ aside
 .inputContainer
 	position: relative
 	height: 45px
-	width: 90%
+	width: 95%
 	margin-bottom: 5px
 	color: $dark-color
 	font-size: 18px
 
-#send-kitchen
-	@extend .btn-classic-b
-	margin-left: 835px
-	margin-top: 35px
-	font-size: 22px
+.containerCart
+	height: 200px
+	.nameProducts
+		width: 180px
+		font-size: 18px
+
+.qtyProducts
+	@include qtyProducts
+	.btnPlus, .btnMin
+		@include btnsPlusMin
+
+.countTotal
+	@include containerTotal
+	span
+		margin-left: 20px
+		margin-right: 20px
+
+.btnkitchen
+	@include flex-center
+	margin-top: 83px
+	#send-kitchen
+		@include btnclassic
+		font-size: 22px
+		background-color: $dark-color
+		color: $lg-color

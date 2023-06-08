@@ -33,28 +33,54 @@
 
     <div class="buttons-menu">
         <div class="container-food" *ngFor="let product of filteredProducts">
-            <button type="button" class="btn-food" style="background-image:url({{product.image}});"></button>
+            <button type="button" class="btn-food" value="{{product.id}}" (click)="addToCart(product)"
+                style="background-image:url({{product.image}});"></button>
         </div>
     </div>
 
     <div>
         <article class="order">
-            <form action="">
+            <form [formGroup]="newOrder">
                 <div class="tittle">
                     <h2>Orden</h2>
                 </div>
+
                 <div class="inputContainer">
                     <label for="table">Mesa </label>
                     <input type="text">
                 </div>
+
                 <div class="inputContainer">
                     <label for="client">Cliente </label>
                     <input type="text">
                 </div>
+
+                <div class="containerCart">
+                    <div class="cartProducts" *ngFor="let product of cart$ | async">
+                        <div class="nameProducts">
+                            <p>{{product.name}}</p>
+                        </div>
+
+                        <div class="qtyProducts">
+                            <button class="btnPlus" style="background-image:url(/assets/images/btn-plus.png);"></button>
+                            <span>{{product.qty}}</span>
+                            <button class="btnMin" style="background-image:url(/assets/images/btn-min.png);"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="countTotal">
+                    <span>Total</span>
+                    <span>$ 10</span>
+                </div>
+
+                <div class="btnkitchen">
+                    <button type="button" id="send-kitchen">Enviar a Cocina</button>
+                </div>
+
             </form>
         </article>
 
-        <button type="button" id="send-kitchen">Enviar a Cocina</button>
     </div>
 
 </div>
