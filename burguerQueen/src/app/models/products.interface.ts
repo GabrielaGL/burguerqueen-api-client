@@ -5,4 +5,5 @@ export interface productsI {
     image:any;
     type:string;
     dateEntry:any;
+    qty:number;
 }

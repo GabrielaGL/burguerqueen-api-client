@@ -13,6 +13,5 @@ export interface ordersI {
 }
 
 export interface orderqtyI {
-    qty:number;
     product:productsI[];
 }
