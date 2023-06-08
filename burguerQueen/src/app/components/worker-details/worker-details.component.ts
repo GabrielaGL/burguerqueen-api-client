@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 import { OrdersService } from '../../services/admin.service';
 import { workersI } from 'src/app/models/workers.interface';
@@ -17,7 +16,7 @@ export class WorkerDetailsComponent {
 
 
 
-  constructor(private activerouter: ActivatedRoute, private router: Router, private api: OrdersService) { }
+  constructor(private activerouter: ActivatedRoute, private api: OrdersService) { }
 
   ngOnInit(): void {
     let workerid = this.activerouter.snapshot.paramMap.get('id');
