@@ -42,6 +42,7 @@ export class OrdersService {
   }
 
 
+
   postWorker(form: workersI): Observable<responsepostI> {
     let url = this.url + 'users';
     return this.http.post<responsepostI>(url, form);
@@ -58,6 +59,7 @@ export class OrdersService {
   }
 
 
+  
   addProduct(product: productsI) {
     if (this.cartProducts.length === 0) {
       product.qty = 1;
@@ -76,6 +78,24 @@ export class OrdersService {
       }
     }
 
+  }
+
+  deleteProduct(id:number) {
+    this.cartProducts = this.cartProducts.filter((product) => {
+      return product.id != id;
+    })
+    this.cart.next(this.cartProducts);
+  }
+
+  findIdProduct(id:number) {
+    return this.cartProducts.find(element => {
+      return element.id === id;
+    })
+  }
+
+  totalCart() {
+    const total = this.cartProducts.reduce(function (acc, product) {return acc + (product.qty * product.price);}, 0)
+    return total;
   }
 
 }
