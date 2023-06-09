@@ -9,9 +9,14 @@ $dark-orange: #E59328
 $red-color: #FA6C52
 $green-color: #02915F
 
-@mixin tittles
-    font-family: $font-tittle
-    color: $dark-color
+@mixin btnback
+    background-size: cover
+    border: none
+    background-color: transparent
+    width: 80px
+    height: 80px
+    margin-bottom: 30px
+    margin-top: 30px
 
 @mixin btnclassic
     padding: 10px 30px 10px 30px
@@ -37,15 +42,6 @@ $green-color: #02915F
     margin-right: 30px
     margin-bottom: 35px
 
-@mixin btnshop
-    background-size: cover
-    border: none
-    background-color: transparent
-    width: 85px
-    height: 85px
-    margin-bottom: 30px
-    margin-top: 30px
-
 @mixin btnnote
     background-size: cover
     border: none
@@ -55,74 +51,33 @@ $green-color: #02915F
     margin-bottom: 30px
     margin-top: 30px
 
-@mixin btnback
+@mixin btnsEditDel
+    border: none
+    background-color: transparent
+    background-size: cover
+    width: 50px
+    height: 50px
+    margin-left: 25px
+    margin-right: 25px
+
+
+@mixin btnshop
     background-size: cover
     border: none
     background-color: transparent
-    width: 80px
-    height: 80px
+    width: 85px
+    height: 85px
     margin-bottom: 30px
     margin-top: 30px
 
-@mixin imgFood
-    width: 600px
-    margin-top: -430px
-    margin-left: 250px
-
-@mixin listProducts
-    width: 572px
-    height: 441px
-    margin-left: 200px
-    margin-top: -430px
-
-@mixin product
-    border-radius: 7px
-    border: 2px solid $dark-color
-    line-height: 0.5
-    text-align: center
-    width: 265px
-    height: 271px
-    display: inline-block
-    margin-right: 5px
-    margin-left: 5px
-    margin-bottom: 5px
-    margin-top: 5px
-
-@mixin imgsProducts
-    margin-right: 5px
-    margin-left: 5px
-    display: flex
-    width: 255px
-    height: 141px
-
-@mixin imgMenu
-    width: 150px
-    height: 150px
+@mixin btnsPlusMin
     background-size: cover
     background-color: transparent
     border: none
-
-@mixin listWorkers
-    height: 535px
-    width: 531px
-    margin-left: 218px
-    margin-top: -410px
-
-@mixin worker
-    height: 160px
-    width: 160px
-    margin-bottom: 10px
-    margin-top: 10px
-    margin-right: 5px
-    margin-left: 5px
-    display: inline-block
-
-@mixin nicknameWorker
-    text-align: center
-    font-size: 25px
-    font-weight: bold
-    color: $dark-orange
-    margin-top: 10px
+    width: 20px
+    height: 20px
+    margin-left: 15px
+    margin-right: 15px
 
 @mixin btnworker
     background-image: url(/assets/images/btn-worker.png)
@@ -139,15 +94,6 @@ $green-color: #02915F
     display: inline-flex
     border: none
 
-@mixin btnsEditDel
-    border: none
-    background-color: transparent
-    background-size: cover
-    width: 50px
-    height: 50px
-    margin-left: 25px
-    margin-right: 25px
-
 @mixin containerFood
     width: 230px
     height: 230px
@@ -157,33 +103,92 @@ $green-color: #02915F
     margin-bottom: 5px
     margin-top: 5px
 
+@mixin containerTotal
+    position: fixed
+    font-size: 27px
+    margin-left: 125px
+    margin-top: 26px
+    color: $dark-color
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+
+@mixin imgFood
+    width: 600px
+    margin-top: -430px
+    margin-left: 250px
+
+@mixin imgMenu
+    width: 150px
+    height: 150px
+    background-size: cover
+    background-color: transparent
+    border: none
+
+@mixin imgsProducts
+    margin-right: 5px
+    margin-left: 5px
+    display: flex
+    width: 255px
+    height: 141px
+
+@mixin listProducts
+    width: 572px
+    height: 441px
+    margin-left: 200px
+    margin-top: -430px
+
+@mixin listWorkers
+    height: 535px
+    width: 531px
+    margin-left: 218px
+    margin-top: -410px
+
+@mixin nicknameWorker
+    text-align: center
+    font-size: 25px
+    font-weight: bold
+    color: $dark-orange
+    margin-top: 10px
+
 @mixin qtyProducts
-    width: 130px
+    width: 162px
     margin-top: -42px
     margin-left: 168px
     display: flex
     align-items: center
     justify-content: center
     font-size: 20px
+    color: $dark-color
 
-@mixin btnsPlusMin
-    background-size: cover
-    background-color: transparent
-    border: none
-    width: 25px
-    height: 25px
-    margin-left: 10px
-    margin-right: 10px
+@mixin product
+    border-radius: 7px
+    border: 2px solid $dark-color
+    line-height: 0.5
+    text-align: center
+    width: 265px
+    height: 271px
+    display: inline-block
+    margin-right: 5px
+    margin-left: 5px
+    margin-bottom: 5px
+    margin-top: 5px
 
-@mixin containerTotal
-    position: fixed
-    font-size: 27px
-    margin-left: 92px
+@mixin tittles
+    font-family: $font-tittle
+    color: $dark-color
 
-@mixin flex-center
-    display: flex
-    justify-content: center
+@mixin worker
+    height: 160px
+    width: 160px
+    margin-bottom: 10px
+    margin-top: 10px
+    margin-right: 5px
+    margin-left: 5px
+    display: inline-block
 
+    
 body
     background-image: url(/assets/images/fondo-common.png)
     background-repeat: no-repeat
