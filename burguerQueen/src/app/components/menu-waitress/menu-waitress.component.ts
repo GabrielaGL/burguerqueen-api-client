@@ -22,7 +22,8 @@ export class MenuWaitressComponent {
   newOrder = new FormGroup({
     table: new FormControl('', Validators.required),
     client: new FormControl('', Validators.required),
-    
+    products: new FormControl('', Validators.required),
+    dataEntry: new FormControl(new Date())
   })
 
   constructor(private service:OrdersService, private activerouter:ActivatedRoute) {}
