@@ -25,10 +25,10 @@ export class MenuWaitressComponent {
     
   })
 
-  constructor(private api:OrdersService, private activerouter:ActivatedRoute, private service:OrdersService) {}
+  constructor(private service:OrdersService, private activerouter:ActivatedRoute) {}
 
   ngOnInit():void {
-    this.api.getProducts().subscribe(data => {
+    this.service.getProducts().subscribe(data => {
       this.products = data
       this.filteredProducts = data.filter(product => product.type === "Desayuno");
     })
@@ -38,4 +38,31 @@ export class MenuWaitressComponent {
     return this.service.addProduct(product);
   }
 
+  totalProduct(price:number, qty:number) {
+    return price * qty;
+  }
+
+  deleteProduct(id:number) {
+    this.service.deleteProduct(id);
+  }
+
+  updateCart(operation:string, id:number) {
+    const product = this.service.findIdProduct(id);
+    if (product) {
+      if (operation === 'min' && product.qty > 0) {
+        product.qty = product.qty -1;
+      }
+      if (operation === 'add') {
+        product.qty = product.qty +1;
+      }
+      if (product.qty === 0) {
+        this.deleteProduct(id);
+      }
+    }
+  }
+
+  totalCart() {
+    const result = this.service.totalCart();
+    return result;
+  }
 }
