@@ -19,8 +19,8 @@ export class WorkerDetailsComponent {
   constructor(private activerouter: ActivatedRoute, private api: OrdersService) { }
 
   ngOnInit(): void {
-    let workerid = this.activerouter.snapshot.paramMap.get('id');
-    this.api.getSingleWorker(workerid).subscribe(data => {
+    let workerId = this.activerouter.snapshot.paramMap.get('id');
+    this.api.getWorkerbyId(workerId).subscribe(data => {
       this.worker = data
       console.log(data);
 
