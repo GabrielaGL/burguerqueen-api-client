@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { LoginI } from '../../models/login.interface';
 import { ResponseI } from '../../models/response.interface';
+
+import { AuthService } from '../../services/auth.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
 
 import { Router } from '@angular/router';
 
@@ -18,7 +21,7 @@ export class LoginComponent {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private authLog: AuthService, private router: Router) { }
+  constructor(private authLog: AuthService, private router: Router, private alerts:AlertsService) { }
 
   //TODO: Modal con msj de error para usuario incorrecto
   errorstatus: boolean = false;
@@ -37,12 +40,13 @@ export class LoginComponent {
         accessToken:data.accessToken,
         user:data.user.id,
         userRole:data.user.role
-      }
-      console.log(dataResp);
+      }    
+      console.log(dataResp.accessToken);
       
-
+    
       if (dataResp.accessToken) {
         localStorage.setItem('token', dataResp.accessToken);
+        this.alerts.responseSuccess('Bienvenidx a Burguer Queen 👑', 'Login exitoso')
         if (dataResp.userRole === 'admin') {
           this.router.navigate(['add/waitress']);
         }
@@ -53,6 +57,8 @@ export class LoginComponent {
           this.router.navigate(['kitchen']);
         }
 
+      } else {
+        this.alerts.responseError('', 'Error')
       }
 
     })
