@@ -2,7 +2,6 @@ import { productsI } from "./products.interface";
 
 export interface ordersI {
     id:number;
-    waitress:string;
     table:number;
     userId:number;
     client:string;
