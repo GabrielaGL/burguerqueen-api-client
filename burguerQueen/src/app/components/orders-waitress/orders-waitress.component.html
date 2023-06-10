@@ -22,6 +22,16 @@
                     style="background-image:url(/assets/images/btn-back.png);"></button>
             </a>
         </aside>
+    </div>
+
+    <div class="tabOfOrders">
+        <article class="order" *ngFor="let order of filteredOrders">
+            <p> Orden #{{order.id}}</p>
+            <div class="products">
+                <p class="client">Cliente: {{order.client}}</p>
+            </div>
+
+        </article>
 
     </div>
 </div>

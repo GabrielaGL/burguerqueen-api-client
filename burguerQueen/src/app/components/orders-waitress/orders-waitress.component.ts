@@ -12,6 +12,7 @@ import { ordersI } from 'src/app/models/orders.interface';
 export class OrdersWaitressComponent {
 
   orders:ordersI[] = [];
+  filteredOrders:ordersI[] = [];
 
   newOrder = new FormGroup({
     table: new FormControl('', Validators.required),
@@ -24,6 +25,7 @@ export class OrdersWaitressComponent {
   ngOnInit():void {
     this.api.getOrders().subscribe(data => {
       this.orders = data
+      this.filteredOrders = data.filter(order => order.status === "pending");
       console.log(data);
       
     })
