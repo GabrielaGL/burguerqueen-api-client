@@ -64,6 +64,12 @@ export class OrdersService {
   }
 
 
+  patchWorker(id:any, form: workersI):Observable<responsepostI> {
+    let url = this.url + 'users/' + id;
+    return this.http.patch<responsepostI>(url, form)
+  }
+
+
   
   addProduct(product: productsI) {
     if (this.cartProducts.length === 0) {
