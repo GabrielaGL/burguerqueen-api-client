@@ -26,12 +26,17 @@ export class OrdersService {
     return this.http.get<productsI[]>(url);
   }
 
+  getProductById(id:number):Observable<productsI[]> {
+    let url = this.url + 'products/' + id;
+    return this.http.get<productsI[]>(url);
+  }
+
   getWorkers(): Observable<workersI[]> {
     let url = this.url + 'users';
     return this.http.get<workersI[]>(url);
   }
 
-  getSingleWorker(id: any): Observable<workersI> {
+  getWorkerbyId(id: any): Observable<workersI> {
     let url = this.url + 'users/' + id;
     return this.http.get<workersI>(url);
   }
@@ -77,7 +82,6 @@ export class OrdersService {
         this.cart.next(this.cartProducts);
       }
     }
-
   }
 
   deleteProduct(id:number) {

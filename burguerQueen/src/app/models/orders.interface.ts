@@ -1,16 +1,22 @@
-import { productsI } from "./products.interface";
-
 export interface ordersI {
-    id:number;
-    table:number;
-    userId:number;
-    client:string;
-    products:orderqtyI[];
-    status:string;
-    dataEntry:any;
-    dateProcessed:any;
+    id: number;
+    table: number;
+    client: string;
+    products: orderProductsI[];
+    status: string;
+    dataEntry: any;
+    dateProcessed: any;
 }
 
-export interface orderqtyI {
-    product:productsI[];
+interface orderProductsI {
+    qty: number;
+    product: {
+        id: number;
+        name: string;
+        price: number;
+        image: string;
+        type: string;
+        dateEntry: string;
+        qty:number;
+    };
 }

@@ -19,10 +19,12 @@ export class MenuWaitressComponent {
   orders:ordersI[] = [];
   cart$ = this.service.cart$
 
+  idProducts:any = [];
+
   newOrder = new FormGroup({
     table: new FormControl('', Validators.required),
     client: new FormControl('', Validators.required),
-    products: new FormControl('', Validators.required),
+    id: new FormControl('', Validators.required),
     dataEntry: new FormControl(new Date())
   })
 
@@ -65,5 +67,12 @@ export class MenuWaitressComponent {
   totalCart() {
     const result = this.service.totalCart();
     return result;
+  }
+
+
+  createOrder() {
+    this.idProducts = this.addToCart
+    console.log(this.idProducts);
+    
   }
 }

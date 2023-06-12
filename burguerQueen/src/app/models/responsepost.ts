@@ -1,4 +1,4 @@
 export interface responsepostI {
-    status:number;
+    status:any;
     result:any;
 }

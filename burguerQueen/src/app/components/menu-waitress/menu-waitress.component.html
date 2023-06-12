@@ -47,18 +47,18 @@
 
                 <div class="inputContainer">
                     <label for="table">Mesa </label>
-                    <input type="text">
+                    <input type="text" formControlName="table">
                 </div>
 
                 <div class="inputContainer">
-                    <label for="client">Cliente </label>
+                    <label for="client" formControlName="client">Cliente </label>
                     <input type="text">
                 </div>
 
                 <div class="containerCart">
                     <div class="cartProducts" *ngFor="let product of cart$ | async">
                         <div class="nameProducts">
-                            <p>{{product.name}}</p>
+                            <p> {{product.name}} </p>
                             <p class="priceT">$ {{totalProduct(product.price, product.qty)}}</p>
                         </div>
 
@@ -81,7 +81,7 @@
 
 
                 <div class="btnkitchen">
-                    <button type="button" id="send-kitchen">Enviar a Cocina</button>
+                    <button type="submit" (click)="createOrder()" id="send-kitchen">Enviar a Cocina</button>
                 </div>
 
             </form>
