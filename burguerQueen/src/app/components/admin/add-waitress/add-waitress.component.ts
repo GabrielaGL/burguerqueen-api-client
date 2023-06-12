@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { OrdersService } from '../../services/admin.service';
+import { OrdersService } from '../../../services/admin.service';
 import { AlertsService } from 'src/app/services/alerts/alerts.service';
 
 import { workersI } from 'src/app/models/workers.interface';

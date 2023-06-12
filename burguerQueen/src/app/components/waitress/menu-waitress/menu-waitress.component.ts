@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
-import { OrdersService } from '../../services/admin.service';
+import { OrdersService } from '../../../services/admin.service';
 import { productsI } from 'src/app/models/products.interface';
 import { ordersI } from 'src/app/models/orders.interface';
 

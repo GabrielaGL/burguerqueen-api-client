@@ -10,19 +10,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LoginComponent } from './components/login/login.component';
-import { MenuWaitressComponent } from './components/menu-waitress/menu-waitress.component';
-import { OrdersWaitressComponent } from './components/orders-waitress/orders-waitress.component';
-import { MenuLunchWaitressComponent } from './components/menu-lunch-waitress/menu-lunch-waitress.component';
-import { AddWaitressComponent } from './components/add-waitress/add-waitress.component';
-import { AddChefComponent } from './components/add-chef/add-chef.component';
-import { AddProductsComponent } from './components/add-products/add-products.component';
+import { MenuWaitressComponent } from './components/waitress/menu-waitress/menu-waitress.component';
+import { OrdersWaitressComponent } from './components/waitress/orders-waitress/orders-waitress.component';
+import { MenuLunchWaitressComponent } from './components/waitress/menu-lunch-waitress/menu-lunch-waitress.component';
+import { AddWaitressComponent } from './components/admin/add-waitress/add-waitress.component';
+import { AddChefComponent } from './components/admin/add-chef/add-chef.component';
+import { AddProductsComponent } from './components/admin/add-products/add-products.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
-import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
-import { AddAdminComponent } from './components/add-admin/add-admin.component';
+import { AddProductsLunchComponent } from './components/admin/add-products-lunch/add-products-lunch.component';
+import { AddAdminComponent } from './components/admin/add-admin/add-admin.component';
 
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
-import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
-import { EditWorkerComponent } from './components/edit-worker/edit-worker.component';
+import { WorkerDetailsComponent } from './components/admin/worker-details/worker-details.component';
+import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
 
 
 @NgModule({

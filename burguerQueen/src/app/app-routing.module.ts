@@ -2,17 +2,17 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LoginComponent } from './components/login/login.component';
-import { MenuWaitressComponent } from './components/menu-waitress/menu-waitress.component';
-import { MenuLunchWaitressComponent } from './components/menu-lunch-waitress/menu-lunch-waitress.component';
-import { OrdersWaitressComponent } from './components/orders-waitress/orders-waitress.component';
-import { AddWaitressComponent } from './components/add-waitress/add-waitress.component';
-import { AddChefComponent } from './components/add-chef/add-chef.component';
+import { MenuWaitressComponent } from './components/waitress/menu-waitress/menu-waitress.component';
+import { MenuLunchWaitressComponent } from './components/waitress/menu-lunch-waitress/menu-lunch-waitress.component';
+import { OrdersWaitressComponent } from './components/waitress/orders-waitress/orders-waitress.component';
+import { AddWaitressComponent } from './components/admin/add-waitress/add-waitress.component';
+import { AddChefComponent } from './components/admin/add-chef/add-chef.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
-import { AddProductsComponent } from './components/add-products/add-products.component';
-import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
-import { AddAdminComponent } from './components/add-admin/add-admin.component';
-import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
-import { EditWorkerComponent } from './components/edit-worker/edit-worker.component';
+import { AddProductsComponent } from './components/admin/add-products/add-products.component';
+import { AddProductsLunchComponent } from './components/admin/add-products-lunch/add-products-lunch.component';
+import { AddAdminComponent } from './components/admin/add-admin/add-admin.component';
+import { WorkerDetailsComponent } from './components/admin/worker-details/worker-details.component';
+import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { OrdersService } from '../../services/admin.service';
+import { OrdersService } from '../../../services/admin.service';
 import { productsI } from 'src/app/models/products.interface';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { OrdersService } from '../../services/admin.service';
+import { OrdersService } from '../../../services/admin.service';
 import { productsI } from 'src/app/models/products.interface';
 
 @Component({

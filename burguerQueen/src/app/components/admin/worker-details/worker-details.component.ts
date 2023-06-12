@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { OrdersService } from '../../services/admin.service';
+import { OrdersService } from '../../../services/admin.service';
 import { workersI } from 'src/app/models/workers.interface';
 
 
