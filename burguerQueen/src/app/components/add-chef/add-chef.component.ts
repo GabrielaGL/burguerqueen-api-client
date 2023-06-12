@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { OrdersService } from '../../services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
+
 import { workersI } from 'src/app/models/workers.interface';
 
 @Component({
@@ -23,7 +25,7 @@ export class AddChefComponent {
   })
 
 
-  constructor(private api:OrdersService) { }
+  constructor(private api:OrdersService, private alert:AlertsService) { }
 
   ngOnInit():void {
     this.api.getWorkers().subscribe(data => {

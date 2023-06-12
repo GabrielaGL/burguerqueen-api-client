@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { OrdersService } from '../../services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
+
 import { productsI } from 'src/app/models/products.interface';
 
 @Component({
@@ -21,7 +23,7 @@ export class AddProductsLunchComponent {
     dateEntry: new FormControl(new Date())
   })
    
-  constructor(private api:OrdersService) {}
+  constructor(private api:OrdersService, private alert:AlertsService) {}
 
   ngOnInit():void {
     this.api.getProducts().subscribe(data => {

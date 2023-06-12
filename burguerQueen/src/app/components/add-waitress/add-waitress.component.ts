@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { OrdersService } from '../../services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
+
 import { workersI } from 'src/app/models/workers.interface';
+import { responsepostI } from 'src/app/models/responsepost';
 
 @Component({
   selector: 'app-add-waitress',
@@ -24,7 +27,7 @@ export class AddWaitressComponent {
   })
 
 
-  constructor(private api: OrdersService) { }
+  constructor(private api: OrdersService, private alert:AlertsService) { }
 
   ngOnInit(): void {
     this.api.getWorkers().subscribe(data => {
@@ -36,8 +39,15 @@ export class AddWaitressComponent {
   addUser(form:any) {
     const info:workersI = form
     this.api.postWorker(info).subscribe(data => {
-      //TODO: Agregar Modal
-    console.log(data);
+      let resp:responsepostI = data;
+      console.log('Algo', resp.result);
+      //FIXME: Response no funciona
+      
+      if (resp.status == 'ok') {
+        this.alert.responseSuccess('Empleadx agregadx a Burguer Queen 👑', '¡Todo listo!')
+      } else {
+        this.alert.responseError(resp.result.error_msg, 'Error')
+      }
     })    
   }
 }
