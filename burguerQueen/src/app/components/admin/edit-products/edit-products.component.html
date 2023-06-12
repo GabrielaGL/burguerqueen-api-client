@@ -1,0 +1,70 @@
+<div>
+    <div class="sect-tittle">
+        <h1>Menu</h1>
+    </div>
+    <div class="sect-btns">
+        <a [routerLink]="['/add/products/breakfast']">
+            <button type="button" class="btn-classic-b">Desayuno</button>
+        </a>
+        <a [routerLink]="['/add/products/lunch']">
+            <button type="button" class="btn-classic-b">Comida</button>
+        </a>
+    </div>
+
+    <div class="btns-aside">
+        <aside>
+            <a [routerLink]="['/add/waitress']">
+                <button type="button" class="btn-user"
+                style="background-image:url(/assets/images/btn-dark-user.png);"></button>
+            </a>
+        </aside>
+
+        <aside>
+            <button type="button" class="btn-note"
+                style="background-image:url(/assets/images/btn-lg-note.png);"></button>
+        </aside>
+
+        <aside>
+            <a [routerLink]="['']">
+                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+            </a>
+        </aside>
+
+    </div>
+
+    <div class="edit-product">
+        <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
+            <h3>Editar</h3>
+            <div class="inputContainer">
+                <label for="">Nombre</label>
+                <input type="text" class="input-edit" placeholder="Nombre" formControlName="name">
+            </div>
+
+            <div class="inputContainer">
+                <label for="">Precio</label>
+                <input type="text" class="input-edit" placeholder="Precio" formControlName="price">
+            </div>
+
+            <div class="inputContainer">
+                <label for="">Image</label>
+                <input type="text" class="input-edit" placeholder="Image" formControlName="image">
+            </div>
+
+            <div class="inputContainer">
+                <label for="">Tipo</label>
+                <input type="text" class="input-edit" placeholder="Tipo" formControlName="type">
+            </div>
+
+            <div class="btnContainer">
+                <a [routerLink]="['/add/products/breakfast']">
+                    <button class="btn-cancel">Cancelar</button>
+                </a>
+                <button type="submit" class="btn-acept">Aceptar</button>
+            </div>
+
+        </form>
+    </div>
+
+ 
+
+</div>
