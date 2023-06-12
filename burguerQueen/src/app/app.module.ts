@@ -22,6 +22,7 @@ import { AddAdminComponent } from './components/add-admin/add-admin.component';
 
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
+import { EditWorkerComponent } from './components/edit-worker/edit-worker.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { WorkerDetailsComponent } from './components/worker-details/worker-detai
     KitchenComponent,
     AddProductsLunchComponent,
     AddAdminComponent,
-    WorkerDetailsComponent
+    WorkerDetailsComponent,
+    EditWorkerComponent
   ],
   imports: [
     BrowserModule,

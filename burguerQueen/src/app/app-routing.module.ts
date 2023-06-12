@@ -12,6 +12,7 @@ import { AddProductsComponent } from './components/add-products/add-products.com
 import { AddProductsLunchComponent } from './components/add-products-lunch/add-products-lunch.component';
 import { AddAdminComponent } from './components/add-admin/add-admin.component';
 import { WorkerDetailsComponent } from './components/worker-details/worker-details.component';
+import { EditWorkerComponent } from './components/edit-worker/edit-worker.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path:'add/waitress', component:AddWaitressComponent, pathMatch:'full' },
   { path:'add/chef', component:AddChefComponent, pathMatch:'full' },
   { path:'add/admin', component:AddAdminComponent, pathMatch:'full' },
-  { path: 'details/:id', component:WorkerDetailsComponent },
+  { path: 'details/:id', component:WorkerDetailsComponent, pathMatch:'full' },
+  { path: 'details/:id/edit', component:EditWorkerComponent, pathMatch:'full' },
   { path:'add/products/lunch', component:AddProductsLunchComponent, pathMatch:'full' },
   { path:'add/products/breakfast', component:AddProductsComponent, pathMatch:'full' },
   { path:'kitchen', component:KitchenComponent }
