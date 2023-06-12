@@ -17,12 +17,42 @@
 
     </div>
 
-    <div class="order">
-        <article class="uniqOrder" *ngFor="let order of orders">
-            <div class="dataOrder">
-                <p class="idOrder">ID: {{order.id}}</p>
-                <p>Mesa: {{order.table}}</p>
+    <div class="tabOfOrders">
+        <article class="order" *ngFor="let order of filteredOrders">
+            <div class="idOrder">
+                <p> Orden #{{order.id}}</p>
             </div>
+            <p class="date"> Hora: <span>{{order.dataEntry.split(" ")[1]}}</span></p>
+            <p class="table"> Mesa: <span>{{order.table}}</span></p>
+            <p class="client">Cliente: <span>{{order.client}}</span></p>
+            <p class="productsLabel">Productos:</p>
+            <div class="products" *ngFor="let product of order.products">
+                <p class="productName">{{product.product.name}} &nbsp;&nbsp;&nbsp; <span>x
+                        {{product.product.qty}}</span></p>
+            </div>
+            <div class="btnsRC">
+                <button type="button" class="btn-ready">Orden Terminada</button>
+            </div>
+        </article>
+
+        <article class="order" *ngFor="let order of filteredOrdersReady">
+            <div class="idOrder">
+                <p> Orden #{{order.id}}</p>
+            </div>
+            <p class="date"> Hora: <span>{{order.dataEntry.split(" ")[1]}}</span></p>
+            <p class="table"> Mesa: <span>{{order.table}}</span></p>
+            <p class="client">Cliente: <span>{{order.client}}</span></p>
+            <p class="productsLabel">Productos:</p>
+            <div class="products" *ngFor="let product of order.products">
+                <p class="productName">{{product.product.name}} &nbsp;&nbsp;&nbsp; <span>x
+                        {{product.product.qty}}</span></p>
+            </div>
+            <div class="btnsRC">
+                <button type="button" class="btn-cancel">Regresar a Cocina</button>
+            </div>
+            <button type="button" class="btn-status"
+                style="background-image:url(/assets/images/btn-ready.png);"></button>
+
         </article>
     </div>
 </div>
