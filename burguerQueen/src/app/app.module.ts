@@ -23,6 +23,7 @@ import { AddAdminComponent } from './components/admin/add-admin/add-admin.compon
 import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { WorkerDetailsComponent } from './components/admin/worker-details/worker-details.component';
 import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
+import { EditProductsComponent } from './components/admin/edit-products/edit-products.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.
     AddProductsLunchComponent,
     AddAdminComponent,
     WorkerDetailsComponent,
-    EditWorkerComponent
+    EditWorkerComponent,
+    EditProductsComponent
   ],
   imports: [
     BrowserModule,
