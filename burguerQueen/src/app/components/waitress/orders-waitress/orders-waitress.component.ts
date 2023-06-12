@@ -33,9 +33,6 @@ export class OrdersWaitressComponent {
     })
   }
 
-  totalCart() {
-    const result = this.service.totalCart();
-    return result;
-  }
+  //TODO: Agregar total a las ordenes
 
 }
