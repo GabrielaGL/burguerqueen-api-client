@@ -36,7 +36,9 @@
             <img class="img-menu" src="{{product.image}}" alt="">
             <p id="name-product">Nombre: {{product.name}}</p>
             <p id="price-product">Precio: $ {{product.price}}</p>
-            <button type="button" class="btn-edit" style="background-image:url(/assets/images/edit-btn.png);"></button>
+            <a routerLink="/products/{{product.id}}/edit">
+                <button type="button" class="btn-edit" style="background-image:url(/assets/images/edit-btn.png);"></button>
+            </a>
             <button type="button" class="btn-delete"
                 style="background-image:url(/assets/images/delete-btn.png);"></button>
         </article>
