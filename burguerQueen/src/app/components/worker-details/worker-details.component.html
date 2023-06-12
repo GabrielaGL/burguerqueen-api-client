@@ -29,7 +29,8 @@
 
         <aside>
             <a [routerLink]="['/add/admin']">
-                <button type="button" class="btn-back" style="background-image:url(/assets/images/btn-back.png);"></button>
+                <button type="button" class="btn-back"
+                    style="background-image:url(/assets/images/btn-back.png);"></button>
             </a>
         </aside>
     </div>
@@ -40,7 +41,10 @@
             <p class="nickname-worker">{{worker.nickname}}</p>
             <p class="name-worker">Nombre: {{worker.name}}</p>
             <p class="email-worker">Email: {{worker.email}}</p>
-            <button type="button" class="btn-edit" style="background-image:url(/assets/images/edit-btn.png);"></button>
+            <a routerLink="/details/{{worker.id}}/edit">
+                <button type="button" class="btn-edit"
+                    style="background-image:url(/assets/images/edit-btn.png);"></button>
+            </a>
             <button type="button" class="btn-delete"
                 style="background-image:url(/assets/images/delete-btn.png);"></button>
         </article>
