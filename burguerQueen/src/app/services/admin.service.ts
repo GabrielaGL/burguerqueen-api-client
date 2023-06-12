@@ -26,9 +26,9 @@ export class OrdersService {
     return this.http.get<productsI[]>(url);
   }
 
-  getProductById(id:number):Observable<productsI[]> {
+  getProductById(id:any):Observable<productsI> {
     let url = this.url + 'products/' + id;
-    return this.http.get<productsI[]>(url);
+    return this.http.get<productsI>(url);
   }
 
   getWorkers(): Observable<workersI[]> {
@@ -64,8 +64,14 @@ export class OrdersService {
   }
 
 
+
   patchWorker(id:any, form: workersI):Observable<responsepostI> {
     let url = this.url + 'users/' + id;
+    return this.http.patch<responsepostI>(url, form)
+  }
+
+  patchProduct(id:any, form:productsI):Observable<responsepostI> {
+    let url = this.url + 'products/' + id;
     return this.http.patch<responsepostI>(url, form)
   }
 
