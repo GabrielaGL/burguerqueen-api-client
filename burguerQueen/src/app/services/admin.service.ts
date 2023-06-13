@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 
-import { productsI } from '../models/products.interface';
 import { workersI } from '../models/workers.interface';
 import { responsepostI } from '../models/responsepost';
 import { ordersI } from 'src/app/models/orders.interface';
+import { productsI } from 'src/app/models/orders.interface';
 
 
 @Injectable({
@@ -48,9 +48,9 @@ export class OrdersService {
 
 
 
-  postWorker(form: workersI): Observable<responsepostI> {
+  postWorker(form: workersI): Observable<any> {
     let url = this.url + 'users';
-    return this.http.post<responsepostI>(url, form);
+    return this.http.post<any>(url, form);
   }
 
   postProducts(form: productsI): Observable<responsepostI> {
@@ -82,6 +82,7 @@ export class OrdersService {
       product.qty = 1;
       this.cartProducts.push(product);
       this.cart.next(this.cartProducts);
+      
     } else {
       let productMod = this.cartProducts.find(element => {
         return element.id === product.id;
@@ -94,6 +95,7 @@ export class OrdersService {
         this.cart.next(this.cartProducts);
       }
     }
+    return this.cartProducts;
   }
 
   deleteProduct(id:number) {
