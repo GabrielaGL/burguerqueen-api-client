@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule, DatePipe } from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,7 @@ import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { WorkerDetailsComponent } from './components/admin/worker-details/worker-details.component';
 import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
 import { EditProductsComponent } from './components/admin/edit-products/edit-products.component';
+
 
 
 @NgModule({
@@ -52,14 +54,16 @@ import { EditProductsComponent } from './components/admin/edit-products/edit-pro
     BrowserAnimationsModule,
     ToastrModule,
     ToastrModule.forRoot(),
+    CommonModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
       // in the case a new interceptor is needed
-      multi: true
-    }
+      multi: true,
+    },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })
