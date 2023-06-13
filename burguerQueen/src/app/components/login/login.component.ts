@@ -21,7 +21,7 @@ export class LoginComponent {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private authLog: AuthService, private router: Router, private alerts:AlertsService) { }
+  constructor(private authLog: AuthService, private router: Router, private alerts: AlertsService) { }
 
   //TODO: Modal con msj de error para usuario incorrecto
   errorstatus: boolean = false;
@@ -32,21 +32,18 @@ export class LoginComponent {
   }
 
 
-  onLogin(form:any) {
-    const info:LoginI = form
-    
-    this.authLog.loginByEmail(info).subscribe(data => {
-      let dataResp: ResponseI = {
-        accessToken:data.accessToken,
-        user:data.user.id,
-        userRole:data.user.role
-      }    
-      console.log(dataResp.accessToken);
-      
-    
-      if (dataResp.accessToken) {
+  onLogin(form: any) {
+    const info: LoginI = form
+
+    this.authLog.loginByEmail(info).subscribe({
+      next: (response: any) => {
+        let dataResp: ResponseI = {
+          accessToken: response.accessToken,
+          user: response.user.id,
+          userRole: response.user.role
+        }
         localStorage.setItem('token', dataResp.accessToken);
-        this.alerts.responseSuccess('Bienvenidx a Burguer Queen 👑', 'Login exitoso')
+        this.alerts.responseSuccess('👑 Bienvenidx a Burguer Queen', 'Login exitoso')
         if (dataResp.userRole === 'admin') {
           this.router.navigate(['add/waitress']);
         }
@@ -56,13 +53,10 @@ export class LoginComponent {
         if (dataResp.userRole === 'chef') {
           this.router.navigate(['kitchen']);
         }
-
-      } else {
-        this.alerts.responseError('', 'Error')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que tu usuario o contraseña es incorrecto', 'Error')
       }
-
-    })
-
+    });
   }
-
 }
