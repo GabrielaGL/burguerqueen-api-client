@@ -51,8 +51,8 @@
                 </div>
 
                 <div class="inputContainer">
-                    <label for="client" formControlName="client">Cliente </label>
-                    <input type="text">
+                    <label for="client">Cliente </label>
+                    <input type="text" formControlName="client">
                 </div>
 
                 <div class="containerCart">
@@ -81,7 +81,7 @@
 
 
                 <div class="btnkitchen">
-                    <button type="submit" (click)="createOrder()" id="send-kitchen">Enviar a Cocina</button>
+                    <button type="submit" (click)="createOrder()" id="send-kitchen">Enviar</button>
                 </div>
 
             </form>
