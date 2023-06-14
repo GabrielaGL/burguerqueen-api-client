@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { map, switchMap, take } from 'rxjs';
 
 import { OrdersService } from '../../../services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
 import { productsI } from 'src/app/models/products.interface';
 import { ordersI } from 'src/app/models/orders.interface';
 
@@ -30,11 +31,10 @@ export class MenuWaitressComponent {
     status: new FormControl('pending'),
   })
 
-  constructor(private service: OrdersService, private activerouter: ActivatedRoute, private datePipe: DatePipe) { }
+  constructor(private service: OrdersService, private activerouter: ActivatedRoute, private datePipe: DatePipe, private alerts:AlertsService) { }
 
   ngOnInit(): void {
     this.service.getProducts().subscribe(data => {
-      this.products = data
       this.filteredProducts = data.filter(product => product.type === "Desayuno");
     })
   }
@@ -93,7 +93,16 @@ export class MenuWaitressComponent {
         switchMap(dataOrder => {
           return this.service.postOrders(dataOrder)
         })
-      ).subscribe()
+      ).subscribe({
+        next: (response:any) => {
+          this.alerts.responseSuccess('Solo queda esperar a que nuestrxs cocinerxs reales lo preparen 🤤', '¡Orden creada!');
+        },
+        error: (error) => {
+          this.alerts.responseError('Parece que la orden no se logró 😥 Inténtalo de nuevo', 'Error')
+        }
+      })
+    } else {
+      this.alerts.responseError('Parece que la orden no se logró 😥 Inténtalo de nuevo', 'Error')
     }
   }
 }
