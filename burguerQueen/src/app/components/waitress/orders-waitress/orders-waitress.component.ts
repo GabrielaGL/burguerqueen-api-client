@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 import { OrdersService } from 'src/app/services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
 
 import { ordersI } from 'src/app/models/orders.interface';
 
@@ -17,7 +18,7 @@ export class OrdersWaitressComponent {
   filteredOrdersReady: ordersI[] = [];
 
 
-  constructor(private service: OrdersService) { }
+  constructor(private service: OrdersService, private alerts: AlertsService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.service.getOrders().subscribe(data => {
@@ -27,8 +28,19 @@ export class OrdersWaitressComponent {
     })
   }
 
-  
 
-  //TODO: Agregar total a las ordenes
+  finishOrder(id: any) {
+    this.service.deleteOrders(id).subscribe({
+      next: (response: any) => {
+        this.alerts.responseSuccess('Otro clientx feliz en Burguer Queen 👌', '¡La orden fue entregada!')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que ocurrió un error 😥 Acude con tu administrador, el servidor podría estar fallando', 'Error')
+      }
+    })
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+  }
 
 }
