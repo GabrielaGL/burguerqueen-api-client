@@ -36,6 +36,6 @@ export class WorkerDetailsComponent {
         this.alerts.responseError('Parece que ocurrió un error 😥 El servidor podría estar fallando', 'Error')
       }
     })
-    this.router.navigate([])
+    this.router.navigate(['add/waitress']);
   }
 }
