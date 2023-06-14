@@ -55,10 +55,10 @@ aside
 	@include flex-center
 	border-radius: 7px
 	border: 2px solid $dark-color
-	margin-top: -610px
-	margin-left: 800px
-	width: 326px
-	height: 470px
+	margin-top: -554px
+	margin-left: 784px
+	width: 375px
+	height: 556px
 
 .tittle
 	@include flex-center
@@ -71,13 +71,47 @@ aside
 .inputContainer
 	position: relative
 	height: 45px
-	width: 90%
+	width: 318px
 	margin-bottom: 5px
 	color: $dark-color
-	font-size: 18px
+	font-size: 20px
+	input
+		font-family: $font-content
+		font-size: 18px
+		font-weight: bold
+		color: $dark-orange
+		width: 169px
 
-#send-kitchen
-	@extend .btn-classic-b
-	margin-left: 835px
-	margin-top: 35px
-	font-size: 22px
+.containerCart
+	height: 200px
+	color: $dark-color
+	.nameProducts
+		width: 180px
+		font-size: 20px
+		line-height: .5
+		.priceT
+			font-size: 15px
+
+.qtyProducts
+	@include qtyProducts
+	.btnPlus, .btnMin
+		@include btnsPlusMin
+	.btnDel
+		@include btnsPlusMin
+		margin-left: 10px
+		margin-right: 10px
+
+.countTotal
+	@include containerTotal
+	span
+		margin-left: 20px
+		margin-right: 20px
+
+.btnkitchen
+	@include flex-center
+	margin-top: 83px
+	#send-kitchen
+		@include btnclassic
+		font-size: 22px
+		background-color: $dark-color
+		color: $lg-color
