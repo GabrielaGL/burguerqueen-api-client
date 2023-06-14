@@ -17,12 +17,6 @@ export class OrdersWaitressComponent {
   filteredOrdersReady: ordersI[] = [];
 
 
-  newOrder = new FormGroup({
-    table: new FormControl('', Validators.required),
-    client: new FormControl('', Validators.required),
-
-  })
-
   constructor(private service: OrdersService) { }
 
   ngOnInit(): void {
@@ -32,6 +26,8 @@ export class OrdersWaitressComponent {
       console.log(this.filteredOrders);
     })
   }
+
+  
 
   //TODO: Agregar total a las ordenes
 
