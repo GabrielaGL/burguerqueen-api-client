@@ -75,6 +75,27 @@ export class OrdersService {
     return this.http.patch<responsepostI>(url, form)
   }
 
+  patchOrder(id:any, status:any):Observable<ordersI> {
+    let url = this.url + 'orders/' + id;
+    return this.http.patch<any>(url, status)
+  }
+
+
+  deleteOrders(id:any):Observable<any> {
+    let url = this.url + 'orders/' + id;
+    return this.http.delete<any>(url)
+  }
+
+  deleteProducts(id:any):Observable<any> {
+    let url = this.url + 'products/' + id;
+    return this.http.delete<any>(url)
+  }
+
+  deleteWorkers(id:any):Observable<any> {
+    let url = this.url + 'users/' + id;
+    return this.http.delete<any>(url)
+  }
+
 
   
   addProduct(product: productsI) {
