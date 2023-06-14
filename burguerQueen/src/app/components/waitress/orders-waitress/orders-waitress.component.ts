@@ -43,4 +43,19 @@ export class OrdersWaitressComponent {
     }, 1500);
   }
 
+  cancelOrder(id:any) {
+    this.service.deleteOrders(id).subscribe({
+      next: (response:any) => {
+        this.alerts.responseSuccess('Los datos se están actualizando...', 'La orden fue cancelada con éxito')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que ocurrió un error 😥 Acude con tu administrador, el servidor podría estar fallando', 'Error')
+      }
+    })
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+  }
+  
+
 }
