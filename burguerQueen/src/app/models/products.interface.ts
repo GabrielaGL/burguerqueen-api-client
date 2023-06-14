@@ -2,8 +2,8 @@ export interface productsI {
     id:number;
     name:string;
     price:number;
-    image:any;
+    image:string;
     type:string;
-    dateEntry:any;
+    dateEntry:string;
     qty:number;
 }

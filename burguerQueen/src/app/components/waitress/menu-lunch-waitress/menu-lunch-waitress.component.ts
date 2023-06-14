@@ -13,10 +13,10 @@ export class MenuLunchWaitressComponent {
   products:productsI[] = [];
   filteredProducts: productsI[] = [];
 
-  constructor(private api:OrdersService) {}
+  constructor(private service:OrdersService) {}
 
   ngOnInit():void {
-    this.api.getProducts().subscribe(data => {
+    this.service.getProducts().subscribe(data => {
       this.products = data
       this.filteredProducts = data.filter(product => product.type === "Comida");     
       return

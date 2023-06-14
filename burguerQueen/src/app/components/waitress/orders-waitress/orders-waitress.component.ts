@@ -18,7 +18,7 @@ export class OrdersWaitressComponent {
   filteredOrdersReady: ordersI[] = [];
 
 
-  constructor(private service: OrdersService, private alerts: AlertsService, private toastr: ToastrService) { }
+  constructor(private service: OrdersService, private alerts: AlertsService) { }
 
   ngOnInit(): void {
     this.service.getOrders().subscribe(data => {
