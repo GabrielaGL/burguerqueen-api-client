@@ -29,17 +29,18 @@
             <div class="idOrder">
                 <p> Orden #{{order.id}}</p>
             </div>
-            <p class="date"> Hora: <span>{{order.dataEntry.split(" ")[1]}}</span></p>
-            <p class="table"> Mesa: <span>{{order.table}}</span></p>
-            <p class="client">Cliente: <span>{{order.client}}</span></p>
-            <p class="productsLabel">Productos:</p>
-            <div class="products" *ngFor="let product of order.products">
-                <p class="productName">{{product.product.name}} &nbsp;&nbsp;&nbsp; <span>x
-                        {{product.product.qty}}</span></p>
+            <div class="dataClient">
+                <p class="date"> Hora: <span>{{order.dataEntry.split(" ")[1]}}</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mesa: <span>{{order.table}}</span></p>
+                <p class="client">Cliente: <span>{{order.client}}</span></p>
+                <p class="productsLabel">Productos:</p>
+                <div class="products" *ngFor="let product of order.products">
+                    <p class="productName">{{product.name}} &nbsp;&nbsp; <span>x
+                            {{product.qty}} &nbsp; (${{product.qty * product.price}} )</span></p>
+                </div>
             </div>
-            <p class="totalOrder"> Total: <span>$ {{totalCart()}}</span></p>
             <div class="btnsRC">
-                <button type="button" class="btn-cancel">Cancelar</button>
+                <button type="button" class="btn-cancel">Cancelar Orden</button>
             </div>
             <button type="button" class="btn-status"
                 style="background-image:url(/assets/images/btn-pending.png);"></button>
@@ -54,10 +55,10 @@
             <p class="client">Cliente: <span>{{order.client}}</span></p>
             <p class="productsLabel">Productos:</p>
             <div class="products" *ngFor="let product of order.products">
-                <p class="productName">{{product.product.name}} &nbsp;&nbsp;&nbsp; <span>x
-                        {{product.product.qty}}</span></p>
+                <p class="productName">{{product.name}} &nbsp;&nbsp;&nbsp; <span>x
+                        {{product.qty}}</span></p>
             </div>
-            <p class="totalOrder"> Total: <span>$ {{totalCart()}}</span></p>
+            <p class="totalOrder"> Total: <span>$ </span></p>
             <div class="btnsRC">
                 <button type="button" class="btn-ready">Entregada</button>
             </div>
