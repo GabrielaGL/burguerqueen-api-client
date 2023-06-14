@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { OrdersService } from '../../../services/admin.service';
+import { AlertsService } from 'src/app/services/alerts/alerts.service';
+
 import { productsI } from 'src/app/models/products.interface';
 
 @Component({
@@ -22,10 +24,10 @@ export class AddProductsComponent {
     dateEntry: new FormControl(new Date())
   })
    
-  constructor(private api:OrdersService) {}
+  constructor(private service:OrdersService, private alerts:AlertsService) {}
 
   ngOnInit():void {
-    this.api.getProducts().subscribe(data => {
+    this.service.getProducts().subscribe(data => {
       this.products = data
       this.filteredProducts = data.filter(product => product.type === "Desayuno");
     })
@@ -33,10 +35,17 @@ export class AddProductsComponent {
 
   addProductB(form:any) {
     const info:productsI = form;
-    this.api.postProducts(info).subscribe(data => {
-      //TODO: Agregar Modal
-    console.log(data);
-    })    
+    this.service.postProducts(info).subscribe({
+      next: (response:any) => {
+        this.alerts.responseSuccess('Los datos se están actualizando...', '¡Nuevo producto agregado!')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que ocurrió un error 😥 Acude con tu administrador, el servidor podría estar fallando', 'Error')
+      }
+    })
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);   
     
   }
 

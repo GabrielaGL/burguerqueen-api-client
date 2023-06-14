@@ -27,10 +27,10 @@ export class AddWaitressComponent {
   })
 
 
-  constructor(private api: OrdersService, private alert:AlertsService) { }
+  constructor(private service: OrdersService, private alerts:AlertsService) { }
 
   ngOnInit(): void {
-    this.api.getWorkers().subscribe(data => {
+    this.service.getWorkers().subscribe(data => {
       this.workers = data
       this.filteredWorkers = data.filter(worker => worker.role === "waitress");
     })
@@ -38,16 +38,16 @@ export class AddWaitressComponent {
 
   addUser(form:any) {
     const info:workersI = form
-    this.api.postWorker(info).subscribe(data => {
-      let resp:responsepostI = data;
-      console.log('Algo', resp.result);
-      //FIXME: Response no funciona
-      
-      if (resp.status == 'ok') {
-        this.alert.responseSuccess('Empleadx agregadx a Burguer Queen 👑', '¡Todo listo!')
-      } else {
-        this.alert.responseError(resp.result.error_msg, 'Error')
+    this.service.postWorker(info).subscribe({
+      next: (response: any) => {
+        this.alerts.responseSuccess('Los datos se están actualizando...', 'El trabajadxr fue agregadx con éxito')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que ocurrió un error 😥 El servidor podría estar fallando', 'Error')
       }
     })    
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
   }
 }

@@ -23,10 +23,10 @@ export class AddProductsLunchComponent {
     dateEntry: new FormControl(new Date())
   })
    
-  constructor(private api:OrdersService, private alert:AlertsService) {}
+  constructor(private service:OrdersService, private alerts:AlertsService) {}
 
   ngOnInit():void {
-    this.api.getProducts().subscribe(data => {
+    this.service.getProducts().subscribe(data => {
       this.products = data
       this.filteredProducts = data.filter(product => product.type === "Comida");
     })
@@ -34,10 +34,17 @@ export class AddProductsLunchComponent {
 
   addProduct(form:any) {
     const info:productsI = form;
-    this.api.postProducts(info).subscribe(data => {
-      //TODO: Agregar Modal
-    console.log(data);
-    })    
+    this.service.postProducts(info).subscribe({
+      next: (response:any) => {
+        this.alerts.responseSuccess('Los datos se están actualizando...', '¡Nuevo producto agregado!')
+      },
+      error: (error) => {
+        this.alerts.responseError('Parece que ocurrió un error 😥 Acude con tu administrador, el servidor podría estar fallando', 'Error')
+      }
+    })
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);   
     
   }
 }
