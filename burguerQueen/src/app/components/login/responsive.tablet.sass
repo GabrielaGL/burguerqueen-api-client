@@ -1,8 +1,7 @@
 @import /src/styles.sass
 
 .bg
-	background-image: url(/assets/images/bg/bg-desktop.png)
-	background-size: cover
+	background-image: url(/assets/images/fondo-login.png)
 	margin-top: -9px
 	margin-left: -9px
 
@@ -16,39 +15,34 @@
 
 h1
 	@include tittles
-	font-size: 70px
+	font-size: 85px
 	margin-bottom: 35px
 	margin-top: 25px
 
-.login-bg
-	background-image: url(/assets/images/bg/bg-login.png)
-	background-size: cover
+.login-back
+	@include flex-center
+	background-image: url(/assets/images/cuadro-login.png)
 	background-repeat: no-repeat
-	width: 715px
-	height: 449px
-	margin-left: 183px
+	width: 90%
+	height: 73%
 
 h2
 	@include tittles
 	font-size: 63px
-	margin-top: 25px
-	margin-left: 331px
-	margin-bottom: 20px
+	margin-top: 20px
 
 .inputContainer
 	position: relative
 	height: 45px
 	width: 90%
 	margin-bottom: 45px
-	margin-left: 253px
-
 
 .input
 	position: absolute
 	top: 0px
 	left: 0px
 	height: 100%
-	width: 50%
+	width: 160%
 	border: 2px solid $btn-orange
 	border-radius: 7px
 	font-size: 18px
@@ -89,5 +83,3 @@ h2
 	@include btnclassic
 	color: $lg-color
 	background-color: $btn-orange
-	margin-left: 331px
-
