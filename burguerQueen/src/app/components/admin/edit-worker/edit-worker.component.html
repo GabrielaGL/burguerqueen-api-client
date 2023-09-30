@@ -2,19 +2,12 @@
     <div class="sect-tittle">
         <h1>Trabajadorxs</h1>
     </div>
-    <div class="sect-btns">
-        <a [routerLink]="['/add/waitress']">
-            <button type="button" class="btn-classic-b">Meserxs</button>
-        </a>
-        <a [routerLink]="['/add/chef']">
-            <button type="button" class="btn-classic-b">Chef</button>
-        </a>
-        <a [routerLink]="['/add/admin']">
-            <button type="button" class="btn-classic-b">Admin</button>
-        </a>
-    </div>
 
     <div class="btns-aside">
+        <aside>
+            <img class="logo-aside" src="/assets/images/logo-aside.png" />
+        </aside>
+
         <aside>
             <button type="button" class="btn-user"
                 style="background-image:url(/assets/images/btn-lg-user.png);"></button>
@@ -37,7 +30,7 @@
 
     <div class="edit-workers">
         <form [formGroup]="editForm" (ngSubmit)="postForm(editForm.value)">
-            <h3>Editar</h3>
+            <h2>Editar</h2>
             <div class="inputContainer">
                 <label for="">Usuario</label>
                 <input type="text" class="input-edit" placeholder="Usuario" formControlName="nickname">
@@ -51,6 +44,11 @@
             <div class="inputContainer">
                 <label for="">Email</label>
                 <input type="text" class="input-edit" placeholder="Email" formControlName="email">
+            </div>
+
+            <div class="inputContainer">
+                <label for="">Rol</label>
+                <input type="text" class="input-edit" placeholder="Email" formControlName="role">
             </div>
 
             <div class="inputContainer">
