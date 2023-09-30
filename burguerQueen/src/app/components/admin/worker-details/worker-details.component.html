@@ -2,19 +2,13 @@
     <div class="sect-tittle">
         <h1>Trabajadorxs</h1>
     </div>
-    <div class="sect-btns">
-        <a [routerLink]="['/add/waitress']">
-            <button type="button" class="btn-classic-b">Meserxs</button>
-        </a>
-        <a [routerLink]="['/add/chef']">
-            <button type="button" class="btn-classic-b">Chef</button>
-        </a>
-        <a [routerLink]="['/add/admin']">
-            <button type="button" class="btn-classic-b">Admin</button>
-        </a>
-    </div>
+   
 
     <div class="btns-aside">
+        <aside>
+            <img class="logo-aside" src="/assets/images/logo-aside.png" />
+        </aside>
+
         <aside>
             <button type="button" class="btn-user"
                 style="background-image:url(/assets/images/btn-lg-user.png);"></button>
@@ -41,12 +35,15 @@
             <p class="nickname-worker">{{worker.nickname}}</p>
             <p class="name-worker">Nombre: {{worker.name}}</p>
             <p class="email-worker">Email: {{worker.email}}</p>
-            <a routerLink="/details/{{worker.id}}/edit">
-                <button type="button" class="btn-edit"
-                    style="background-image:url(/assets/images/edit-btn.png);"></button>
-            </a>
-            <button type="button" (click)="deleteWorker(worker.id)" class="btn-delete"
-                style="background-image:url(/assets/images/delete-btn.png);"></button>
+            <p class="role-worker">Rol: {{worker.role}}</p>
+            <div>
+                <a routerLink="/details/{{worker.id}}/edit">
+                    <button type="button" class="btn-edit"
+                        style="background-image:url(/assets/images/edit-btn.png);"></button>
+                </a>
+                <button type="button" (click)="deleteWorker(worker.id)" class="btn-delete"
+                    style="background-image:url(/assets/images/delete-btn.png);"></button>
+            </div>
         </article>
     </div>
 

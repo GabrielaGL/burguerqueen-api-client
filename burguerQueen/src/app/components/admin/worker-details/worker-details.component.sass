@@ -13,6 +13,7 @@ h1
 	font-size: 85px
 	margin-bottom: 35px
 	margin-top: 25px
+	margin-left: 72px
 
 .btn-classic
 	@include btnclassic
@@ -27,6 +28,13 @@ h1
 
 .btns-aside
 	width: 180px
+	background-color: $dark-orange
+	height: 100%
+	margin-top: -197px
+	margin-left: -10px
+
+.logo-aside
+	@include logoAside
 
 aside
 	@include flex-center
@@ -41,25 +49,34 @@ aside
 	@include btnback
 
 .detail-workers
-	@include product
-	height: 467px
+	@include btnworker
+	height: 100%
 	width: 511px
 	margin-left: 396px
-	margin-top: -390px
+	margin-top: -500px
+	cursor: auto
+	.worker
+		font-size: 20px
+		display: grid
+		justify-items: center
 	.img-worker
 		@include imgMenu
 		width: 200px
 		height: 200px
 		margin-top: 15px
 	.nickname-worker
-		font-size: 40px
+		font-size: 25px
 		font-weight: bold
 		color: $dark-orange
-	.worker
-		font-size: 20px
+		margin-bottom: 10px
+	p
+		font-size: 15px
+		margin-bottom: -11px
 	.btn-edit, .btn-delete
 		@include btnsEditDel
-		width: 80px
-		height: 80px
+		width: 75px
+		height: 75px
 		margin-left: 70px
 		margin-right: 45px
+		margin-bottom: 20px
+		margin-top: 30px
