@@ -9,7 +9,6 @@ $dark-orange: #E59328
 $red-color: #FA6C52
 $green-color: #02915F
 
-
 @mixin bgCommon
     background-image: url(/assets/images/fondo-common.png)
     background-repeat: no-repeat
@@ -29,7 +28,6 @@ $green-color: #02915F
     border-radius: 7px
     text-decoration: none
     font-family: $font-content
-    font-size: 25px
     font-weight: bold
     outline: 0
     align-items: center
@@ -37,7 +35,6 @@ $green-color: #02915F
     line-height: 1.5
     border: none
     cursor: pointer
-    
 
 @mixin btnfood
     width: 200px
@@ -51,7 +48,6 @@ $green-color: #02915F
     margin-bottom: 35px
     cursor: pointer
 
-
 @mixin btnnote
     background-size: cover
     border: none
@@ -61,7 +57,6 @@ $green-color: #02915F
     margin-bottom: 30px
     margin-top: 30px
     cursor: pointer
-
 
 @mixin btnsEditDel
     border: none
@@ -73,7 +68,6 @@ $green-color: #02915F
     margin-right: 25px
     cursor: pointer
 
-
 @mixin btnshop
     background-size: cover
     border: none
@@ -83,7 +77,6 @@ $green-color: #02915F
     margin-bottom: 30px
     margin-top: 30px
     cursor: pointer
-
 
 @mixin btnsPlusMin
     background-size: cover
@@ -95,15 +88,16 @@ $green-color: #02915F
     margin-right: 15px
     cursor: pointer
 
-
 @mixin btnworker
-    background-image: url(/assets/images/btn-worker.png)
-    background-size: cover
-    background-color: transparent
+    border: 1px solid rgba(255, 255, 255, .25)
+    border-radius: 20px
+    background-color: rgba(255, 255, 255, 0.45)
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25)
+    backdrop-filter: blur(15px)
     height: 160px
     width: 160px
-    color: $lg-color
-    font-size: 35px
+    color: $dark-color
+    font-size: 20px
     font-family: $font-content
     outline: 0
     align-items: center
@@ -111,7 +105,6 @@ $green-color: #02915F
     display: inline-flex
     border: none
     cursor: pointer
-
 
 @mixin containerFood
     width: 230px
@@ -160,7 +153,7 @@ $green-color: #02915F
 
 @mixin listWorkers
     height: 535px
-    width: 531px
+    width: 543px
     margin-left: 218px
     margin-top: -410px
 
@@ -203,8 +196,8 @@ $green-color: #02915F
     width: 160px
     margin-bottom: 10px
     margin-top: 10px
-    margin-right: 5px
-    margin-left: 5px
+    margin-right: 10px
+    margin-left: 10px
     display: inline-block
 
 body
