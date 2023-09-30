@@ -14,6 +14,10 @@
 
     <div class="btns-aside">
         <aside>
+            <img class="logo-aside" src="/assets/images/logo-aside.png" />
+        </aside>
+
+        <aside>
             <button type="button" class="btn-user"
                 style="background-image:url(/assets/images/btn-lg-user.png);"></button>
         </aside>
@@ -37,9 +41,11 @@
     <div class="list-workers">
         <article class="worker" *ngFor="let worker of filteredWorkers">
             <a routerLink="/details/{{worker.id}}">
-                <button type="button" class="btn-worker">{{worker.nickname}}</button>
+                <button type="button" class="btn-worker">
+                    <img class="img-btn-w" src={{worker.image}} />
+                    <p> {{worker.nickname}} </p>
+                </button>
             </a>
-            
         </article>
     </div>
 

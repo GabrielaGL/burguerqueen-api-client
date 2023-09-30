@@ -79,15 +79,7 @@ aside
 	color: transparent
 
 .label
-	position: absolute
-	top: 10px
-	left: 15px
-	padding: 0 4px
-	color: #DADCE0
-	font-family: $font-content
-	font-size: 15px
-	transition: 0.5s
-	z-index: 0
+	@include label
 
 .input:not(:placeholder-shown)+.label
 	top: -20px
