@@ -13,7 +13,7 @@ h1
 	@include tittles
 	font-size: 85px
 	margin-bottom: 35px
-	margin-top: 25px
+	margin-top: -9px
 
 .btn-classic
 	@include btnclassic
@@ -21,6 +21,7 @@ h1
 	border: 2px solid $btn-orange
 	background-color: $lg-color
 	margin-right: 104px
+	font-size: 20px
 
 .btn-classic-b
 	@extend .btn-classic
@@ -28,6 +29,13 @@ h1
 
 .btns-aside
 	width: 180px
+	background-color: $dark-orange
+	height: 100%
+	margin-top: -197px
+	margin-left: -10px
+
+.logo-aside
+	@include logoAside
 
 aside
 	@include flex-center
@@ -43,6 +51,8 @@ aside
 
 .list-products
 	@include listProducts
+	margin-top: -447px
+	
 
 .product
 	@include product
@@ -50,74 +60,32 @@ aside
 		@include imgsProducts
 	.img-menu
 		@include imgMenu
+	p
+		font-size: 13px
 	.btn-edit, .btn-delete
-		@include btnsEditDel		
+		@include btnsEditDel
+			
 
 .order
 	@include flex-center
-	border-radius: 7px
-	border: 2px solid $btn-orange
-	margin-top: -514px
-	margin-left: 800px
-	width: 326px
-	height: 513px
+	@include orderContainer
+	margin-top: -689px
 
 .tittle
 	@include flex-center
-	background-color: $btn-orange
-	width: 327px
-	height: 40px
-	margin-bottom: 38px
-	h2
-		font-family: $font-content
-		font-size: 28px
-		color: $lg-color
-		margin-top: 2px
-		margin-bottom: 10px
+	@include titlesFormAdd
 
 .inputContainer
-	position: relative
-	height: 45px
-	width: 42%
-	margin-bottom: 45px
-	margin-left: 31px
-	color: $btn-orange
-	font-size: 18px
+	@include inputContainer
 
 .input
-	position: absolute
-	top: 0px
-	left: 0px
-	height: 100%
-	width: 160%
-	border: 2px solid $btn-orange
-	border-radius: 7px
-	font-size: 18px
-	padding: 0 20px
-	outline: none
-	background: none
-	z-index: 1
-	&:focus+.label
-		top: -20px
-		left: 3px
-		z-index: 10
-		font-size: 16px
-		font-weight: 600
-		color: $dark-orange
+	@include input
 
 ::placeholder
 	color: transparent
 
 .label
-	position: absolute
-	top: 15px
-	left: 15px
-	padding: 0 4px
-	color: #DADCE0
-	font-family: $font-content
-	font-size: 18px
-	transition: 0.5s
-	z-index: 0
+	@include label
 
 .input:not(:placeholder-shown)+.label
 	top: -20px
@@ -126,18 +94,9 @@ aside
 	font-size: 14px
 	font-weight: 600
 
-.type-selector
-	@extend .input
-	font-family: $font-content
-	color: $dark-color
-
 #cancel-user
 	@include btnclassic
-	background-color: $red-color
-	color: $lg-color
-	font-size: 15px
-	margin-right: 16px
-	margin-left: 20px
+	@include btnForm
 
 #new-user
 	@extend #cancel-user
