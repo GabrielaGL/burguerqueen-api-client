@@ -34,9 +34,7 @@ h1
 	margin-left: -10px
 
 .logo-aside
-	width: 187px
-	margin-bottom: 45px
-	margin-top: 15px
+	@include logoAside
 
 aside
 	@include flex-center
@@ -65,54 +63,17 @@ aside
 
 .order
 	@include flex-center
-	border-radius: 7px
-	border: 2px solid $btn-orange
-	margin-top: -438px
-	margin-left: 827px
-	width: 326px
+	@include orderContainer
 
 .tittle
 	@include flex-center
-	background-color: $btn-orange
-	width: 327px
-	height: 40px
-	margin-bottom: 25px
-	h2
-		font-family: $font-content
-		font-size: 23px
-		color: $lg-color
-		margin-top: 3px
-		margin-bottom: 10px
+	@include titlesFormAdd
 
 .inputContainer
-	position: relative
-	height: 45px
-	width: 42%
-	margin-bottom: 25px
-	margin-left: 31px
-	color: $btn-orange
-	font-size: 18px
+	@include inputContainer
 
 .input
-	position: absolute
-	top: 0px
-	left: 0px
-	height: 88%
-	width: 160%
-	border: 2px solid $btn-orange
-	border-radius: 7px
-	font-size: 15px
-	padding: 0 20px
-	outline: none
-	background: none
-	z-index: 1
-	&:focus+.label
-		top: -20px
-		left: 3px
-		z-index: 10
-		font-size: 15px
-		font-weight: 600
-		color: $dark-orange
+	@include input
 
 ::placeholder
 	color: transparent
@@ -137,12 +98,7 @@ aside
 
 #cancel-user
 	@include btnclassic
-	background-color: $red-color
-	color: $lg-color
-	font-size: 15px
-	margin-right: 16px
-	margin-left: 20px
-	margin-bottom: 10px
+	@include btnForm
 
 #new-user
 	@extend #cancel-user

@@ -41,7 +41,10 @@
     <div class="list-workers">
         <article class="worker" *ngFor="let worker of filteredWorkers">
             <a routerLink="/details/{{worker.id}}">
-                <button type="button" class="btn-worker">{{worker.nickname}}</button>
+                <button type="button" class="btn-worker">
+                    <img class="img-btn-w" src={{worker.image}} />
+                    <p> {{worker.nickname}} </p>
+                </button>
             </a>
             
         </article>
