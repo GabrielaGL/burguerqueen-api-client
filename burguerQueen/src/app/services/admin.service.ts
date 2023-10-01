@@ -12,7 +12,7 @@ import { productsI } from 'src/app/models/orders.interface';
   providedIn: 'root'
 })
 export class OrdersService {
-  url: string = 'http://localhost:8080/'
+  url: string = 'https://mock-burguerqueen.glitch.me/'
   private cartProducts: productsI[] = [];
   private orders: ordersI[] = [];
 

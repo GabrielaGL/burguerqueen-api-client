@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  url: string = 'http://localhost:8080/'
+  url: string = 'https://mock-burguerqueen.glitch.me/'
 
   constructor(private http: HttpClient) { }
 
