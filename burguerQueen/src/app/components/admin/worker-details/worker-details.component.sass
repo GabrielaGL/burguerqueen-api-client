@@ -16,11 +16,7 @@ h1
 	margin-left: 72px
 
 .btns-aside
-	width: 180px
-	background-color: $dark-orange
-	height: 100%
-	margin-top: -197px
-	margin-left: -10px
+	@include menuAside
 
 .logo-aside
 	@include logoAside
@@ -39,11 +35,7 @@ aside
 
 .detail-workers
 	@include btnworker
-	height: 100%
-	width: 511px
-	margin-left: 396px
-	margin-top: -500px
-	cursor: auto
+	@include edit
 	.worker
 		font-size: 20px
 		display: grid

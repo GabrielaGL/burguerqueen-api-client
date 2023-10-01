@@ -12,11 +12,7 @@ h1
 	margin-left: 72px
 
 .btns-aside
-	width: 180px
-	background-color: $dark-orange
-	height: 100%
-	margin-top: -197px
-	margin-left: -10px
+	@include menuAside
 
 .logo-aside
 	@include logoAside
@@ -35,17 +31,8 @@ aside
 
 .edit-workers
 	@include btnworker
-	height: 100%
-	width: 511px
-	margin-left: 396px
-	margin-top: -500px
-	cursor: auto
-	h2
-		color: $btn-orange
-		text-align: center
-		font-size: 30px
-		font-weight: bold
-		margin-bottom: 15px
+	@include edit
+	
 
 .inputContainer
 	position: relative
