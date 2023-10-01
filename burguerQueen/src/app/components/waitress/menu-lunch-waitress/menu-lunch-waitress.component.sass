@@ -12,7 +12,7 @@ h1
 	@include tittles
 	font-size: 85px
 	margin-bottom: 35px
-	margin-top: 25px
+	margin-top: -9px
 
 .btn-classic
 	@include btnclassic
@@ -20,13 +20,18 @@ h1
 	border: 2px solid $btn-orange
 	background-color: $lg-color
 	margin-right: 104px
+	font-size: 18px
 
 .btn-classic-b
 	@extend .btn-classic
 	background-color: $btn-orange
 
 .btns-aside
-	width: 180px
+	@include menuAside
+	margin-top: -218px
+
+.logo-aside
+	@include logoAside
 
 aside
 	@include flex-center
@@ -42,8 +47,8 @@ aside
 
 .buttons-menu
 	width: 600px
-	margin-top: -430px
 	margin-left: 250px
+	margin-top: 20px
 
 .container-food
 	@include containerFood
@@ -53,12 +58,16 @@ aside
 
 .order
 	@include flex-center
-	border-radius: 7px
-	border: 2px solid $dark-color
-	margin-top: -554px
-	margin-left: 784px
-	width: 375px
-	height: 556px
+	border: 1px solid rgba(255, 255, 255, .25)
+	border-radius: 20px
+	background-color: rgba(255, 255, 255, 0.45)
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25)
+	backdrop-filter: blur(15px)
+	padding: 10px
+	margin-top: -454px
+	margin-left: 818px
+	width: 344px
+	height: 100%
 
 .tittle
 	@include flex-center
@@ -70,14 +79,13 @@ aside
 
 .inputContainer
 	position: relative
-	height: 45px
 	width: 318px
-	margin-bottom: 5px
+	margin-bottom: 11px
 	color: $dark-color
-	font-size: 20px
+	font-size: 16px
 	input
 		font-family: $font-content
-		font-size: 18px
+		font-size: 16px
 		font-weight: bold
 		color: $dark-orange
 		width: 169px
@@ -86,9 +94,9 @@ aside
 	height: 200px
 	color: $dark-color
 	.nameProducts
-		width: 180px
-		font-size: 20px
+		font-size: 16px
 		line-height: .5
+		margin-bottom: 28px
 		.priceT
 			font-size: 15px
 
@@ -98,7 +106,7 @@ aside
 		@include btnsPlusMin
 	.btnDel
 		@include btnsPlusMin
-		margin-left: 10px
+		margin-left: 5px
 		margin-right: 10px
 
 .countTotal
@@ -109,9 +117,10 @@ aside
 
 .btnkitchen
 	@include flex-center
-	margin-top: 83px
+	margin-top: 24px
+	margin-bottom: 10px
 	#send-kitchen
 		@include btnclassic
-		font-size: 22px
+		font-size: 16px
 		background-color: $dark-color
 		color: $lg-color

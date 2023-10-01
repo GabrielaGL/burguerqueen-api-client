@@ -20,14 +20,18 @@ h1
 	border: 2px solid $btn-orange
 	background-color: $lg-color
 	margin-right: 104px
+	font-size: 20px
 
 .btn-classic-b
 	@extend .btn-classic
 	background-color: $btn-orange
 
 .btns-aside
-	width: 180px
-	margin-top: 50px
+	@include menuAside
+	margin-top: -177px
+
+.logo-aside
+	@include logoAside
 
 aside
 	@include flex-center
