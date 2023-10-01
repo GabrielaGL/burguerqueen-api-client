@@ -4,6 +4,10 @@
     </div>
     <div class="btns-aside">
         <aside>
+            <img class="logo-aside" src="/assets/images/logo-aside.png" />
+        </aside>
+
+        <aside>
             <button type="button" class="btn-note"
                 style="background-image:url(/assets/images/btn-lg-note.png);"></button>
         </aside>
@@ -36,6 +40,8 @@
             <div class="btnsRC">
                 <button type="button" (click)="statusReady(order.id)" class="btn-ready">Orden Terminada</button>
             </div>
+
+            <button type="button" class="btn-status"></button>
         </article>
 
         <article class="order" *ngFor="let order of filteredOrdersReady">

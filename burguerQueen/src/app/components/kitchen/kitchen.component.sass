@@ -11,8 +11,11 @@ h1
 	margin-top: 5px
 
 .btns-aside
-	width: 180px
-	margin-top: 80px
+	@include menuAside
+	margin-top: -179px
+
+.logo-aside
+	@include logoAside
 
 aside
 	@include flex-center
@@ -26,8 +29,8 @@ aside
 .tabOfOrders
 	width: 951px
 	height: 669px
-	margin-top: -461px
 	margin-left: 263px
+	margin-top: -30px
 
 .order
 	border-radius: 7px
