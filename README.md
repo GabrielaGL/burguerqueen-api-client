@@ -1,25 +1,29 @@
-<h1 align="center"><b> 👑 Burguer Queen 👑 <br/></h1>
- 
+<div id="volver"></div>
+
+
  <div align="center">
- <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/a6568d18-d8ba-41a8-8a89-94d23e186825" alt="Logo" width="250px" height="250px">
+ <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/da965cc5-8efa-40ae-95e4-f0229653d2fc" alt="Logo" width="100%">
  </div>
- 
-<h2 align="center">Autora <br/>
-  Gabriela Gomez </h2>
+
+<h3 align="center">Autora <br/>
+  Gabriela Gomez </h3>
 <br/>
-</b>
+<p align="center"> 
+<a href="https://burguerqueen.vercel.app/login" target="_blank"><strong>Acceso a Despliegue »</strong></a>
+</p>
 
 ## Índice
 
-* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [1. Acerca del Proyecto](#1-acerca-del-proyecto)
 * [2. Prototipo](#2-prototipo)
-* [3. Demo](#3-demo)
+* [3. Características de la Aplicación](#3-características-de-la-aplicación)
+* [4. Cómo Probar la Aplicación](#4-cómo-probar-la-aplicación)
 
 ***
 
-## 1. Resumen del proyecto
+## 1. Acerca del Proyecto
 
-Un pequeño restaurante de hamburguesas, que está creciendo, necesita un
+Un pequeño restaurante de hamburguesas que está creciendo necesita un
 sistema a través del cual puedan tomar pedidos usando una _tablet_, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente.
 
@@ -87,7 +91,7 @@ Los prototipos fueron realizados en **figma**, con notas adicionales para consid
   <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/46a6d779-8e03-4e43-9a6a-27fbc81b639f" width="600px"> <br/> <br/>
 </div>
 
-## 3. Demo
+## 3. Características de la Aplicación
 Utilizando un interceptor y un servicio para registrar las llamadas a la api desde un mock, se dividieron las vistas de los componentes haciendo el filtro de acuerdo al rol del trabajador; esto con la finalidad de que cada empleado lleve sólo la responsabilidad de su rol, para que la aplicación lleve mayor fluidez en cuanto a lo que un usuario puede hacer dentro de la misma. 
 
 Lo primero que se nota en la página es una vista de login, en la que cada empleado tiene su correo y contraseña únicos.
@@ -102,10 +106,10 @@ Este componente incluye la muestra tanto de los trabajadores como de los product
 <br>
 
 <div align="center">
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/57cb38e6-0782-43d0-b535-d51f997e606a" width="600px"> <br/> <br/>
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/c5012ed8-a19c-47da-9b42-1e08e252d2f5" width="600px"> <br/> <br/>
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/6c5b2ed8-c04c-400a-85f9-e47318dc9fa2" width="600px"> <br/> <br/>
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/083b1ca1-abc9-48b5-a481-e689ec605354" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/749b6b47-b8be-45e8-b863-6680f5b631f7" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/018d7cc2-a2c8-4bc0-8bcb-5ed3d419463e" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/e36eac3f-2559-4d88-be9b-92393065bcf6" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/87e16d28-0d74-4b89-bd19-183d6b0e81f5" width="600px"> <br/> <br/>
 </div>
 
 <h3>Vista de los meseros</h3>
@@ -114,8 +118,8 @@ Esta vista incluye tanto los componentes para realizar las órdenes de los clien
 <br>
 
 <div align="center">
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/535fd6aa-ef93-4889-a20a-70b5fe718dca" width="600px"> <br/> <br/>
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/66cfbd2a-134a-418e-9888-c6a234be0069" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/32951e17-6460-4fe2-a30f-7ff050f2682d" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/33b11afd-b605-421f-96d4-bc02d10ab47d" width="600px"> <br/> <br/>
 </div>
 
 <h3>Vista de los cocineros</h3>
@@ -124,6 +128,34 @@ Este componente incluye solamente la vista de las órdenes, con la opcion de mar
 <br>
 
 <div align="center">
-  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/a8aca168-5ec2-424b-b733-cb404c711981" width="600px"> <br/> <br/>
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/de790966-942c-4ed9-b10a-8a46b0299477" width="600px"> <br/> <br/>
 </div>
+
+<h3>Tecnologías Utilizadas</h3>
+
+<li>Angular 16</li>
+<li>Angular CLI</li>
+<li>Typescript</li>
+<li>SASS</li>
+<li>Figma</li>
+
+## 4. Cómo Probar la Aplicación
+Primero es necesario despertar el servidor de mock para la api, dándo click a este <a href="https://mock-burguerqueen.glitch.me/" target="_blank">enlace</a>
+<br>
+Una vez que puedas ver esta pantalla, el servidor se encontrará en funcionamiento:
+<br>
+<br>
+<div align="center">
+  <img src="https://github.com/GabrielaGL/burguerqueen-api-client/assets/120422565/a00f7809-b65c-4710-92e2-033190cad0ab" width="600px"> <br/> <br/>
+</div>
+<br>
+<br>
+Ahora es momento de abrir la aplicación, para eso puedes ir al link de despliegue o hacer click <a href="https://burguerqueen.vercel.app/login" target="_blank">aquí</a> 
+<br>
+Los usuarios registrados para entrar a la aplicación son los siguientes: <br>
+<b>Admin:</b> Correo(ari.ariana_r@burguerqueen.com) Contraseña(ari123) <br>
+<b>Meserx:</b> Correo(mar.mariana_g@burguerqueen.com) Contraseña(mar123) <br>
+<b>Chef:</b> Correo(arturo.arturo_h@burgerqueen.com) Contraseña(arturo123) <br>
+
+
 
