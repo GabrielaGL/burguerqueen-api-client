@@ -140,9 +140,9 @@ Este componente incluye solamente la vista de las órdenes, con la opcion de mar
 <li>Figma</li>
 
 ## 4. Cómo Probar la Aplicación
-Primero es necesario despertar el servidor de mock para la api, dándo click a este <a href="https://mock-burguerqueen.glitch.me/" target="_blank">enlace</a>
+Primero es necesario despertar el de mock para la api, dándo click a este <a href="https://mock-burguerqueen.glitch.me/" target="_blank">enlace</a>
 <br>
-Una vez que puedas ver esta pantalla, el servidor se encontrará en funcionamiento:
+Una vez que puedas ver esta pantalla, el mock se encontrará en funcionamiento:
 <br>
 <br>
 <div align="center">
