@@ -25,6 +25,7 @@ import { AuthInterceptorService } from './interceptor/auth-interceptor.service';
 import { WorkerDetailsComponent } from './components/admin/worker-details/worker-details.component';
 import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
 import { EditProductsComponent } from './components/admin/edit-products/edit-products.component';
+import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 
 
 
@@ -43,7 +44,8 @@ import { EditProductsComponent } from './components/admin/edit-products/edit-pro
     AddAdminComponent,
     WorkerDetailsComponent,
     EditWorkerComponent,
-    EditProductsComponent
+    EditProductsComponent,
+    LogoutButtonComponent
   ],
   imports: [
     BrowserModule,

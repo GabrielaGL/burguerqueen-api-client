@@ -15,21 +15,25 @@ import { WorkerDetailsComponent } from './components/admin/worker-details/worker
 import { EditWorkerComponent } from './components/admin/edit-worker/edit-worker.component';
 import { EditProductsComponent } from './components/admin/edit-products/edit-products.component';
 
+import { adminGuard } from './guards/admin/admin.guard';
+import { chefGuard } from './guards/kitchen/chef.guard';
+import { waitressGuard } from './guards/waitress/waitress.guard';
+
 const routes: Routes = [
   { path:'', redirectTo:'login', pathMatch:'full' },
   { path:'login', component:LoginComponent },
-  { path:'menu/breakfast', component:MenuWaitressComponent, pathMatch:'full' },
-  { path:'menu/lunch', component:MenuLunchWaitressComponent, pathMatch:'full'},
-  { path:'orders', component:OrdersWaitressComponent },
-  { path:'add/waitress', component:AddWaitressComponent, pathMatch:'full' },
-  { path:'add/chef', component:AddChefComponent, pathMatch:'full' },
-  { path:'add/admin', component:AddAdminComponent, pathMatch:'full' },
-  { path: 'details/:id', component:WorkerDetailsComponent, pathMatch:'full' },
-  { path: 'details/:id/edit', component:EditWorkerComponent, pathMatch:'full' },
-  { path:'add/products/lunch', component:AddProductsLunchComponent, pathMatch:'full' },
-  { path:'add/products/breakfast', component:AddProductsComponent, pathMatch:'full' },
-  { path:'products/:id/edit', component:EditProductsComponent, pathMatch:'full' },
-  { path:'kitchen', component:KitchenComponent }
+  { path:'menu/breakfast', component:MenuWaitressComponent, pathMatch:'full', canActivate: [waitressGuard] },
+  { path:'menu/lunch', component:MenuLunchWaitressComponent, pathMatch:'full', canActivate: [waitressGuard]},
+  { path:'orders', component:OrdersWaitressComponent, canActivate: [waitressGuard] },
+  { path:'add/waitress', component:AddWaitressComponent, canActivate: [adminGuard] },
+  { path:'add/chef', component:AddChefComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path:'add/admin', component:AddAdminComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path: 'details/:id', component:WorkerDetailsComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path: 'details/:id/edit', component:EditWorkerComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path:'add/products/lunch', component:AddProductsLunchComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path:'add/products/breakfast', component:AddProductsComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path:'products/:id/edit', component:EditProductsComponent, pathMatch:'full', canActivate: [adminGuard] },
+  { path:'kitchen', component:KitchenComponent, canActivate: [chefGuard] }
 
 ];
 
